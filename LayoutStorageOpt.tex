@@ -95,7 +95,7 @@ The access pattern shows an irregularity, as a result of the iteration index.
 For every group of four sequential array elements, there is only one used for the calculation of the result and the other three are skipped.
 An intuitive interleaving optimization is the interleaving of the arrays \textit{A, B, C and D}, in order to generate sequences of elements that are all useful on the calculation of the \textit{result} variable. 
 A full interleaving exploration could reveal several options to produce larger sequences of array elements that are needed during the execution of Alg.~\ref{alg:motivation}.
-For example, the interleaving of every fourth line within the combined array (A\vert B\vert C\vert D) result in a sequence of 8 accessed elements.
+For example, the interleaving of every fourth line within the combined array ($A\vert B\vert C\vert D$) result in a sequence of 8 accessed elements.
 
 \begin{algorithm}[t]
 \SetAlgoNoLine
@@ -106,18 +106,29 @@ For example, the interleaving of every fourth line within the combined array (A\
 \label{alg:motivation}
 \end{algorithm}
 
-The data-to-memory mapping 
+The data-to-memory mapping is presented in Fig.~\ref{motivation}. 
+The memory architecture consists of four memory banks and the overall memory size is enough to fit the four arrays.
+The conventional approach maps each array in a separate bank.
+If the four arrays are interleaved, the mapping distributes the data through the banks.
+The first four elements are respectively from arrays A, B, C and D and so forth.
+As a result only one forth of the array A can be found on the first bank in contrast to the non-interleaving case, in which the whole array A is mapped on the first bank.
 
 \begin{figure}
 \centering
-	\label{motivational}
+	\label{motivation}
 	\caption{Data-to-memory mapping for motivational example}
 	\includegraphics[scale = 0.5]{Images/motivation.eps}
 \end{figure}
 
 A quick estimation for the difference in the energy consumption between the two approaches can be calculated using a simple energy model for the system.
+The system architecture has an ADD FU that performs operations over 4 words at a time and the memory to processor path has a width of 4 words. 
+Each array element is assumed to have the size of one word.
+The register file at the processor can only store 5 words and the iteration variable $i$.
+The first approach 
 
 \section{Related work}
+
+
 
 \section{System Design Exploration Workflow}
 
@@ -182,8 +193,8 @@ Suitable applications:
 \end{itemize}
 
 \section{Results}
-weaoefssøfaj
-201
+
+
 \begin{table}%
 \tbl{Normalized energy consumption\label{tab:results}}{
 \begin{tabular}{c c}
