@@ -5,51 +5,92 @@ The style file: ACM-Reference-Format-Journals.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: reference.bib
+Warning--I didn't find a database entry for "abraham1999automatic"
+Warning--I didn't find a database entry for "jacob1996analytical"
+Warning--I didn't find a database entry for "li1999hardware"
+Warning--I didn't find a database entry for "chen1999loop"
+Warning--I didn't find a database entry for "grun2000mist"
+Warning--I didn't find a database entry for "jantsch1994hardware"
+Warning--I didn't find a database entry for "passes1995multi"
+Warning--I didn't find a database entry for "kandemir2001improving"
+Warning--I didn't find a database entry for "schmit1997synthesis"
+Warning--I didn't find a database entry for "oshima1997high"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty publisher in Ben00b
+Warning--empty address in Ben00b
 Warning--empty publisher in Che09
 Warning--empty address in Che09
+Warning--empty publisher in Chu02
+Warning--empty address in Chu02
+Warning--require articleno with numpages field in Chu02
+Warning--empty publisher in Fil12
+Warning--empty address in Fil12
+Warning--require articleno with numpages field in Garcia
+Warning--empty publisher in mibench
+Warning--empty address in mibench
+Warning--empty publisher in Elena2010
+Warning--empty address in Elena2010
+Warning--empty publisher in mediabench
+Warning--empty address in mediabench
 Warning--empty address in tcm
+Warning--empty address in Mac02
+Warning--empty publisher in Mar03
+Warning--empty address in Mar03
+Warning--empty publisher in Mei10
+Warning--empty address in Mei10
+Warning--page numbers missing in both pages and numpages fields in Mei11
+Warning--no number and no volume in Pal06b
+Warning--page numbers missing in both pages and numpages fields in Pal06b
+Warning--empty title in Pal06
+Warning--empty publisher in Pal06
+Warning--empty address in Pal06
+Warning--empty publisher in Pal07
+Warning--empty address in Pal07
+Warning--require articleno with numpages field in Pgk01
+Warning--empty year in Poly
+Warning--empty publisher in sharma2013data
+Warning--empty address in sharma2013data
 Warning--empty publisher in Ben99
 Warning--empty address in Ben99
-You've used 5 entries,
+You've used 24 entries,
             5290 wiz_defined-function locations,
-            1263 strings with 15325 characters,
-and the built_in function-call counts, 5941 in all, are:
-= -- 729
-> -- 287
-< -- 0
-+ -- 94
-- -- 100
-* -- 414
-:= -- 676
-add.period$ -- 26
-call.type$ -- 5
-change.case$ -- 40
-chr.to.int$ -- 5
-cite$ -- 10
-duplicate$ -- 458
-empty$ -- 320
-format.name$ -- 116
-if$ -- 1410
-int.to.chr$ -- 1
+            1408 strings with 19516 characters,
+and the built_in function-call counts, 25974 in all, are:
+= -- 3098
+> -- 1211
+< -- 1
++ -- 383
+- -- 400
+* -- 1822
+:= -- 2940
+add.period$ -- 122
+call.type$ -- 24
+change.case$ -- 180
+chr.to.int$ -- 23
+cite$ -- 60
+duplicate$ -- 2141
+empty$ -- 1502
+format.name$ -- 475
+if$ -- 6234
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 20
-newline$ -- 80
-num.names$ -- 40
-pop$ -- 172
+missing$ -- 100
+newline$ -- 237
+num.names$ -- 191
+pop$ -- 898
 preamble$ -- 1
-purify$ -- 64
+purify$ -- 298
 quote$ -- 0
-skip$ -- 149
+skip$ -- 601
 stack$ -- 0
-substring$ -- 438
-swap$ -- 56
-text.length$ -- 0
+substring$ -- 1833
+swap$ -- 217
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
-warning$ -- 5
-while$ -- 37
+type$ -- 324
+warning$ -- 36
+while$ -- 165
 width$ -- 0
-write$ -- 124
-(There were 5 warnings)
+write$ -- 454
+(There were 46 warnings)

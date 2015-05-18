@@ -32,6 +32,32 @@
 \ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
 \ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
 
+\bibitem[\protect\citeauthoryear{Benini et~al\mbox{.}}{Benini
+  et~al\mbox{.}}{2000a}]%
+        {Ben00c}
+{L. Benini} {and} {others}. 2000a.
+\newblock \showarticletitle{Increasing energy efficiency of embedded systems by
+  application-specific memory hierarchy generation}.
+\newblock {\em Design Test of Computers, IEEE\/} {17}, 2 (apr-jun 2000), 74
+  --85.
+\newblock
+\showISSN{0740-7475}
+\showDOI{%
+\url{http://dx.doi.org/10.1109/54.844336}}
+
+
+\bibitem[\protect\citeauthoryear{Benini, Macii, and Poncino}{Benini
+  et~al\mbox{.}}{2000b}]%
+        {Ben00b}
+{L. Benini}, {A. Macii}, {and} {M. Poncino}. 2000b.
+\newblock \showarticletitle{A recursive algorithm for low-power memory
+  partitioning}. In {\em Low Power Electronics and Design, 2000. ISLPED '00.
+  Proceedings of the 2000 International Symposium on}. 78 -- 83.
+\newblock
+\showDOI{%
+\url{http://dx.doi.org/10.1109/LPE.2000.155257}}
+
+
 \bibitem[\protect\citeauthoryear{Cheung, Hsieh, and Balarin}{Cheung
   et~al\mbox{.}}{2009}]%
         {Che09}
@@ -42,6 +68,54 @@
 \newblock
 \showDOI{%
 \url{http://dx.doi.org/10.1109/ASPDAC.2009.4796580}}
+
+
+\bibitem[\protect\citeauthoryear{Chung, De~Micheli, and Benini}{Chung
+  et~al\mbox{.}}{2002}]%
+        {Chu02}
+{Eui-Young Chung}, {Giovanni De~Micheli}, {and} {Luca Benini}. 2002.
+\newblock \showarticletitle{Contents provider-assisted dynamic voltage scaling
+  for low energy multimedia applications}. In {\em Proceedings of the 2002
+  international symposium on Low power electronics and design} {\em (ISLPED
+  '02)}. 42--47.
+\newblock
+\showISBNx{1-58113-475-4}
+
+
+\bibitem[\protect\citeauthoryear{Filippopoulos, Catthoor, Kjeldsberg, Hammari,
+  and Huisken}{Filippopoulos et~al\mbox{.}}{2012}]%
+        {Fil12}
+{Iason Filippopoulos}, {Francky Catthoor}, {Per~Gunnar Kjeldsberg}, {Elena
+  Hammari}, {and} {Jos Huisken}. 2012.
+\newblock \showarticletitle{Memory-aware system scenario approach energy
+  impact}. In {\em NORCHIP, 2012}. 1 --6.
+\newblock
+\showDOI{%
+\url{http://dx.doi.org/10.1109/NORCHP.2012.6403111}}
+
+
+\bibitem[\protect\citeauthoryear{Garcia, Compton, Schulte, Blem, and Fu}{Garcia
+  et~al\mbox{.}}{2006}]%
+        {Garcia}
+{Philip Garcia}, {Katherine Compton}, {Michael Schulte}, {Emily Blem}, {and}
+  {Wenyin Fu}. 2006.
+\newblock \showarticletitle{An overview of reconfigurable hardware in embedded
+  systems}.
+\newblock {\em EURASIP J. Embedded Syst.\/} {2006}, 1 (Jan. 2006), 13--13.
+\newblock
+\showISSN{1687-3955}
+
+
+\bibitem[\protect\citeauthoryear{Gheorghita, , et~al\mbox{.}}{Gheorghita
+  et~al\mbox{.}}{2009}]%
+        {Gheorghita2007}
+{Stefan~Valentin Gheorghita}, {}, {and} {others}. 2009.
+\newblock \showarticletitle{System-scenario-based design of dynamic embedded
+  systems}.
+\newblock {\em ACM Trans. Des. Autom. Electron. Syst.\/} {14}, 1, Article 3
+  (Jan. 2009), 45 pages.
+\newblock
+\showISSN{1084-4309}
 
 
 \bibitem[\protect\citeauthoryear{Gonzalez and Horowitz}{Gonzalez and
@@ -58,6 +132,28 @@
 \url{http://dx.doi.org/10.1109/4.535411}}
 
 
+\bibitem[\protect\citeauthoryear{Guthaus, Ringenberg, Ernst, Austin, Mudge, and
+  Brown}{Guthaus et~al\mbox{.}}{2001}]%
+        {mibench}
+{M.R. Guthaus}, {J.S. Ringenberg}, {D. Ernst}, {T.M. Austin}, {T. Mudge}, {and}
+  {R.B. Brown}. 2001.
+\newblock \showarticletitle{MiBench: A free, commercially representative
+  embedded benchmark suite}. In {\em Workload Characterization, 2001. WWC-4.
+  2001 IEEE International Workshop on}. IEEE, 3--14.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Hammari, Catthoor, Huisken, and
+  Kjeldsberg}{Hammari et~al\mbox{.}}{2010}]%
+        {Elena2010}
+{E. Hammari}, {F. Catthoor}, {J. Huisken}, {and} {P~G Kjeldsberg}. 2010.
+\newblock \showarticletitle{Application of medium-grain multiprocessor mapping
+  methodology to epileptic seizure predictor}. In {\em NORCHIP, 2010}. 1 --6.
+\newblock
+\showDOI{%
+\url{http://dx.doi.org/10.1109/NORCHIP.2010.5669489}}
+
+
 \bibitem[\protect\citeauthoryear{Hulzink, Konijnenburg, Ashouei, Breeschoten,
   Berset, Huisken, Stuyt, de~Groot, Barat, David, et~al\mbox{.}}{Hulzink
   et~al\mbox{.}}{2011}]%
@@ -72,6 +168,17 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Lee, Potkonjak, and Mangione-Smith}{Lee
+  et~al\mbox{.}}{1997}]%
+        {mediabench}
+{C. Lee}, {M. Potkonjak}, {and} {W.H. Mangione-Smith}. 1997.
+\newblock \showarticletitle{MediaBench: a tool for evaluating and synthesizing
+  multimedia and communicatons systems}. In {\em Proceedings of the 30th annual
+  ACM/IEEE international symposium on Microarchitecture}. IEEE Computer
+  Society, 330--335.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Ma et~al\mbox{.}}{Ma et~al\mbox{.}}{2007}]%
         {tcm}
 {Zhe Ma} {and} {others}. 2007.
@@ -80,6 +187,111 @@
 \newblock Springer Publishing Company, Incorporated.
 \newblock
 \showISBNx{1402063288, 9781402063282}
+
+
+\bibitem[\protect\citeauthoryear{Macii, Benini, and Poncino}{Macii
+  et~al\mbox{.}}{2002}]%
+        {Mac02}
+{A. Macii}, {L. Benini}, {and} {M. Poncino}. 2002.
+\newblock {\em Memory Design Techniques for Low-Energy Embedded Systems}.
+\newblock Kluwer Academic Publishers.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Marchal, Bruni, Gomez, Benini, Pinuel,
+  Catthoor, and Corporaal}{Marchal et~al\mbox{.}}{2003}]%
+        {Mar03}
+{P. Marchal}, {D. Bruni}, {J.I. Gomez}, {L. Benini}, {L. Pinuel}, {F.
+  Catthoor}, {and} {H. Corporaal}. 2003.
+\newblock \showarticletitle{SDRAM-Energy-Aware memory allocation for dynamic
+  multi-media applications on multi-processor platforms}. In {\em Design,
+  Automation and Test in Europe Conference and Exhibition, 2003}. 516--521.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Meinerzhagen, Roth, and Burg}{Meinerzhagen
+  et~al\mbox{.}}{2010}]%
+        {Mei10}
+{P Meinerzhagen}, {C Roth}, {and} {A Burg}. 2010.
+\newblock \showarticletitle{Towards generic low-power area-efficient standard
+  cell based memory architectures}. In {\em Circuits and Systems (MWSCAS), 2010
+  53rd IEEE International Midwest Symposium on}. IEEE, 129--132.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Meinerzhagen, Sherazi, Burg, and
+  Rodrigues}{Meinerzhagen et~al\mbox{.}}{2011}]%
+        {Mei11}
+{Pascal Meinerzhagen}, {SM~Yasser Sherazi}, {Andreas Burg}, {and}
+  {Joachim~Neves Rodrigues}. 2011.
+\newblock \showarticletitle{Benchmarking of standard-cell based memories in the
+  sub-VT domain in 65-nm CMOS technology}.
+\newblock {\em IEEE Transactions on Emerging and Selected Topics in Circuits
+  and Systems\/} {1}, 2 (2011).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Palkovic et~al\mbox{.}}{Palkovic
+  et~al\mbox{.}}{2006}]%
+        {Pal06b}
+{Martin Palkovic} {and} {others}. 2006.
+\newblock \showarticletitle{Systematic Preprocessing of Data Dependent
+  Constructs for Embedded Systems}.
+\newblock {\em Journal of Low Power Electronics, Volume 2, Number 1\/} (2006).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Palkovic, Catthoor, and Corporaal}{Palkovic
+  et~al\mbox{.}}{2006}]%
+        {Pal06}
+{Martin Palkovic}, {Francky Catthoor}, {and} {Henk Corporaal}. 2006.
+\newblock In {\em Proc. of the 4th Workshop on Optimizations for DSP and
+  Embedded Systems}. IEEE and ACM SIGMICRO, 21--30.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Palkovic, Corporaal, and Catthoor}{Palkovic
+  et~al\mbox{.}}{2007}]%
+        {Pal07}
+{M. Palkovic}, {H. Corporaal}, {and} {F. Catthoor}. 2007.
+\newblock \showarticletitle{Heuristics for Scenario Creation to Enable General
+  Loop Transformations}. In {\em System-on-Chip, 2007 International Symposium
+  on}. 1 --4.
+\newblock
+\showISSN{07EX1846C}
+\showDOI{%
+\url{http://dx.doi.org/10.1109/ISSOC.2007.4427430}}
+
+
+\bibitem[\protect\citeauthoryear{Panda et~al\mbox{.}}{Panda
+  et~al\mbox{.}}{2001}]%
+        {Pgk01}
+{P.~R. Panda} {and} {others}. 2001.
+\newblock \showarticletitle{Data and memory optimization techniques for
+  embedded systems}.
+\newblock {\em ACM Trans. Des. Autom. Electron. Syst.\/} {6}, 2 (April 2001),
+  149--206.
+\newblock
+\showISSN{1084-4309}
+
+
+\bibitem[\protect\citeauthoryear{Pouchet}{Pouchet}{}]%
+        {Poly}
+{L.N. Pouchet}.
+\newblock PolyBench: The Polyhedral Benchmark suite.
+\newblock   (????).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Sharma, Aa, Agrawal, Raghavan, Panda, and
+  Catthoor}{Sharma et~al\mbox{.}}{2013}]%
+        {sharma2013data}
+{Namita Sharma}, {TV Aa}, {Prashant Agrawal}, {Praveen Raghavan},
+  {Preeti~Ranjan Panda}, {and} {Francky Catthoor}. 2013.
+\newblock \showarticletitle{Data memory optimization in LTE downlink}. In {\em
+  Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE International
+  Conference on}. IEEE, 2610--2614.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Simunic, Benini, and De~Micheli}{Simunic
