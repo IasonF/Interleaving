@@ -32,6 +32,16 @@
 \ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
 \ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
 
+\bibitem[\protect\citeauthoryear{Abraham and Mahlke}{Abraham and
+  Mahlke}{1999}]%
+        {abraham1999automatic}
+{Santosh~G Abraham} {and} {Scott~A Mahlke}. 1999.
+\newblock \showarticletitle{Automatic and efficient evaluation of memory
+  hierarchies for embedded systems}. In {\em Microarchitecture, 1999. MICRO-32.
+  Proceedings. 32nd Annual International Symposium on}. IEEE, 114--125.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Benini et~al\mbox{.}}{Benini
   et~al\mbox{.}}{2000a}]%
         {Ben00c}
@@ -58,6 +68,15 @@
 \url{http://dx.doi.org/10.1109/LPE.2000.155257}}
 
 
+\bibitem[\protect\citeauthoryear{Chen and Sha}{Chen and Sha}{1999}]%
+        {chen1999loop}
+{Fei Chen} {and} {Edwin Hsing-Mean Sha}. 1999.
+\newblock \showarticletitle{Loop scheduling and partitions for hiding memory
+  latencies}. In {\em Proceedings of the 12th international symposium on System
+  synthesis}. IEEE Computer Society, 64.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Cheung, Hsieh, and Balarin}{Cheung
   et~al\mbox{.}}{2009}]%
         {Che09}
@@ -80,6 +99,16 @@
   '02)}. 42--47.
 \newblock
 \showISBNx{1-58113-475-4}
+
+
+\bibitem[\protect\citeauthoryear{Filippopoulos, Catthoor, and
+  Kjeldsberg}{Filippopoulos et~al\mbox{.}}{2013}]%
+        {filippopoulos2013exploration}
+{Iason Filippopoulos}, {Francky Catthoor}, {and} {Per~Gunnar Kjeldsberg}. 2013.
+\newblock \showarticletitle{Exploration of energy efficient memory
+  organisations for dynamic multimedia applications using system scenarios}.
+\newblock {\em Design Automation for Embedded Systems\/} (2013), 1--24.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Filippopoulos, Catthoor, Kjeldsberg, Hammari,
@@ -132,6 +161,16 @@
 \url{http://dx.doi.org/10.1109/4.535411}}
 
 
+\bibitem[\protect\citeauthoryear{Grun, Dutt, and Nicolau}{Grun
+  et~al\mbox{.}}{2000}]%
+        {grun2000mist}
+{Peter Grun}, {Nikil Dutt}, {and} {Alex Nicolau}. 2000.
+\newblock \showarticletitle{MIST: An algorithm for memory miss traffic
+  management}. In {\em Proceedings of the 2000 IEEE/ACM international
+  conference on Computer-aided design}. IEEE Press, 431--438.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Guthaus, Ringenberg, Ernst, Austin, Mudge, and
   Brown}{Guthaus et~al\mbox{.}}{2001}]%
         {mibench}
@@ -168,6 +207,60 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Jacob, Chen, Silverman, and Mudge}{Jacob
+  et~al\mbox{.}}{1996}]%
+        {jacob1996analytical}
+{Bruce~L Jacob}, {Peter~M Chen}, {Seth~R Silverman}, {and} {Trevor~N Mudge}.
+  1996.
+\newblock \showarticletitle{An analytical model for designing memory
+  hierarchies}.
+\newblock {\em Computers, IEEE Transactions on\/} {45}, 10 (1996), 1180--1194.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Jantsch, Ellervee, Hemani, {\"O}berg, and
+  Tenhunen}{Jantsch et~al\mbox{.}}{1994}]%
+        {jantsch1994hardware}
+{Axel Jantsch}, {Peeter Ellervee}, {Ahmed Hemani}, {Johnny {\"O}berg}, {and}
+  {Hannu Tenhunen}. 1994.
+\newblock \showarticletitle{Hardware/software partitioning and minimizing
+  memory interface traffic}. In {\em Proceedings of the conference on European
+  design automation}. IEEE Computer Society Press, 226--231.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kandemir, Sezer, and Delaluz}{Kandemir
+  et~al\mbox{.}}{2001}]%
+        {kandemir2001improving}
+{Mahmut Kandemir}, {Ugur Sezer}, {and} {Victor Delaluz}. 2001.
+\newblock \showarticletitle{Improving memory energy using access pattern
+  classification}. In {\em Proceedings of the 2001 IEEE/ACM international
+  conference on Computer-aided design}. IEEE Press, 201--206.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kritikakou, Catthoor, Kelefouras, and
+  Goutis}{Kritikakou et~al\mbox{.}}{2013}]%
+        {Ang13}
+{A. Kritikakou}, {F. Catthoor}, {V. Kelefouras}, {and} {C. Goutis}. 2013.
+\newblock \showarticletitle{A Scalable and Near-optimal Representation for
+  Storage Size Management}.
+\newblock {\em ACM Trans. Architecture and Code Optimization\/}  {conditionally
+  accepted} (2013).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kritikakou}{Kritikakou}{2013}]%
+        {kritikakou2013phd}
+{Angeliki~Stavros Kritikakou}. 2013.
+\newblock {\em Development of methodologies for memory management and design
+  space exploration of SW/HW computer architectures for designing embedded
+  systems}.
+\newblock Ph.D. Dissertation. Department of Electrical and Computer Engineering
+  School of Engineering, University of Patras.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Lee, Potkonjak, and Mangione-Smith}{Lee
   et~al\mbox{.}}{1997}]%
         {mediabench}
@@ -176,6 +269,16 @@
   multimedia and communicatons systems}. In {\em Proceedings of the 30th annual
   ACM/IEEE international symposium on Microarchitecture}. IEEE Computer
   Society, 330--335.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Li and Wolf}{Li and Wolf}{1999}]%
+        {li1999hardware}
+{Yanbing Li} {and} {Wayne~H Wolf}. 1999.
+\newblock \showarticletitle{Hardware/software co-synthesis with memory
+  hierarchies}.
+\newblock {\em Computer-Aided Design of Integrated Circuits and Systems, IEEE
+  Transactions on\/} {18}, 10 (1999), 1405--1417.
 \newblock
 
 
@@ -231,6 +334,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Oshima, Sheu, and Jen}{Oshima
+  et~al\mbox{.}}{1997}]%
+        {oshima1997high}
+{Yoichi Oshima}, {Bing~J Sheu}, {and} {Steve~H Jen}. 1997.
+\newblock \showarticletitle{High-speed memory architectures for multimedia
+  applications}.
+\newblock {\em Circuits and Devices Magazine, IEEE\/} {13}, 1 (1997), 8--13.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Palkovic et~al\mbox{.}}{Palkovic
   et~al\mbox{.}}{2006}]%
         {Pal06b}
@@ -275,11 +388,31 @@
 \showISSN{1084-4309}
 
 
+\bibitem[\protect\citeauthoryear{Passes, Sha, and Chao}{Passes
+  et~al\mbox{.}}{1995}]%
+        {passes1995multi}
+{NL Passes}, {EH-M Sha}, {and} {Liang-Fang Chao}. 1995.
+\newblock \showarticletitle{Multi-dimensional interleaving for time-and-memory
+  design optimization}. In {\em Computer Design: VLSI in Computers and
+  Processors, 1995. ICCD'95. Proceedings., 1995 IEEE International Conference
+  on}. IEEE, 440--445.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Pouchet}{Pouchet}{}]%
         {Poly}
 {L.N. Pouchet}.
 \newblock PolyBench: The Polyhedral Benchmark suite.
 \newblock   (????).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Schmit and Thomas}{Schmit and Thomas}{1997}]%
+        {schmit1997synthesis}
+{Herman Schmit} {and} {Donald~E Thomas}. 1997.
+\newblock \showarticletitle{Synthesis of application-specific memory designs}.
+\newblock {\em Very Large Scale Integration (VLSI) Systems, IEEE Transactions
+  on\/} {5}, 1 (1997), 101--111.
 \newblock
 
 

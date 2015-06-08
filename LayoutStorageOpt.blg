@@ -5,31 +5,33 @@ The style file: ACM-Reference-Format-Journals.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: reference.bib
-Warning--I didn't find a database entry for "abraham1999automatic"
-Warning--I didn't find a database entry for "jacob1996analytical"
-Warning--I didn't find a database entry for "li1999hardware"
-Warning--I didn't find a database entry for "chen1999loop"
-Warning--I didn't find a database entry for "grun2000mist"
-Warning--I didn't find a database entry for "jantsch1994hardware"
-Warning--I didn't find a database entry for "passes1995multi"
-Warning--I didn't find a database entry for "kandemir2001improving"
-Warning--I didn't find a database entry for "schmit1997synthesis"
-Warning--I didn't find a database entry for "oshima1997high"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty publisher in abraham1999automatic
+Warning--empty address in abraham1999automatic
 Warning--empty publisher in Ben00b
 Warning--empty address in Ben00b
+Warning--empty publisher in chen1999loop
+Warning--empty address in chen1999loop
 Warning--empty publisher in Che09
 Warning--empty address in Che09
 Warning--empty publisher in Chu02
 Warning--empty address in Chu02
 Warning--require articleno with numpages field in Chu02
+Warning--no number and no volume in filippopoulos2013exploration
 Warning--empty publisher in Fil12
 Warning--empty address in Fil12
 Warning--require articleno with numpages field in Garcia
+Warning--empty publisher in grun2000mist
+Warning--empty address in grun2000mist
 Warning--empty publisher in mibench
 Warning--empty address in mibench
 Warning--empty publisher in Elena2010
 Warning--empty address in Elena2010
+Warning--empty publisher in jantsch1994hardware
+Warning--empty address in jantsch1994hardware
+Warning--empty publisher in kandemir2001improving
+Warning--empty address in kandemir2001improving
+Warning--page numbers missing in both pages and numpages fields in Ang13
 Warning--empty publisher in mediabench
 Warning--empty address in mediabench
 Warning--empty address in tcm
@@ -47,50 +49,52 @@ Warning--empty address in Pal06
 Warning--empty publisher in Pal07
 Warning--empty address in Pal07
 Warning--require articleno with numpages field in Pgk01
+Warning--empty publisher in passes1995multi
+Warning--empty address in passes1995multi
 Warning--empty year in Poly
 Warning--empty publisher in sharma2013data
 Warning--empty address in sharma2013data
 Warning--empty publisher in Ben99
 Warning--empty address in Ben99
-You've used 24 entries,
+You've used 37 entries,
             5290 wiz_defined-function locations,
-            1408 strings with 19516 characters,
-and the built_in function-call counts, 25974 in all, are:
-= -- 3098
-> -- 1211
+            1471 strings with 22190 characters,
+and the built_in function-call counts, 39849 in all, are:
+= -- 4930
+> -- 1755
 < -- 1
-+ -- 383
-- -- 400
-* -- 1822
-:= -- 2940
-add.period$ -- 122
-call.type$ -- 24
-change.case$ -- 180
-chr.to.int$ -- 23
-cite$ -- 60
-duplicate$ -- 2141
-empty$ -- 1502
-format.name$ -- 475
-if$ -- 6234
++ -- 551
+- -- 584
+* -- 2704
+:= -- 4439
+add.period$ -- 188
+call.type$ -- 37
+change.case$ -- 269
+chr.to.int$ -- 36
+cite$ -- 87
+duplicate$ -- 3306
+empty$ -- 2321
+format.name$ -- 707
+if$ -- 9683
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 100
-newline$ -- 237
-num.names$ -- 191
-pop$ -- 898
+missing$ -- 154
+newline$ -- 335
+num.names$ -- 295
+pop$ -- 1359
 preamble$ -- 1
-purify$ -- 298
+purify$ -- 452
 quote$ -- 0
-skip$ -- 601
+skip$ -- 940
 stack$ -- 0
-substring$ -- 1833
-swap$ -- 217
+substring$ -- 2874
+swap$ -- 340
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 324
-warning$ -- 36
-while$ -- 165
+type$ -- 506
+warning$ -- 50
+while$ -- 268
 width$ -- 0
-write$ -- 454
-(There were 46 warnings)
+write$ -- 674
+(There were 50 warnings)
