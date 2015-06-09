@@ -362,30 +362,102 @@ The number of matrices is higher and more interleaving options are present.
 However, the interleaving cannot provide an acceptable solution for 16 sequential useful elements.
 \item Motion estimation benchmark is a dynamic algorithm that results in different access patterns based on the identification of the moving objects. 
 The static parts are not accessed resulting in holes in the accesses and the interleaving aims to minimize those parts.
-The interleaving exploration provides possibilities for all tested word lengths. 
+The interleaving exploration provides alternatives for all the  tested word lengths. 
 \end{enumerate}
 
 \section{Results}
 \label{sec:results}
 
-\begin{table}%
-\tbl{Normalized energy consumption\label{tab:results}}{
-\begin{tabular}{c c}
-\includegraphics[width=0.45\linewidth]{Images/Example.eps} & \includegraphics[width=0.45\linewidth]{Images/sor.eps} \\
-\includegraphics[width=0.45\linewidth]{Images/fft.eps} & 
-\includegraphics[width=0.45\linewidth]{Images/mest.eps} 
-\end{tabular}}
-\end{table}
+%\begin{table}%
+%\tbl{Normalized energy consumption\label{tab:results}}{
+%\begin{tabular}{c c}
+%\includegraphics[width=0.45\linewidth]{Images/Example.eps} & \includegraphics[width=0.45\linewidth]{Images/sor.eps} \\
+%\includegraphics[width=0.45\linewidth]{Images/fft.eps} & 
+%\includegraphics[width=0.45\linewidth]{Images/mest.eps} 
+%\end{tabular}}
+%\end{table}
 
 The design exploration is applied to the chosen application benchmarks and energy numbers are derived based on the described target platform.
 The energy numbers are calculated both for the memory and the SIMD architecture presented in Sec.\ref{sec:platform}.
-The following approaches are explored:
+Four approaches are explored and the corresponding energy consumption of each of them is calculated.
+
 \begin{itemize}
-\item No optimization: In this case the 
-\item Interleaving exploration with a static memory platform (gain A)
-\item Data mapping exploration on a reconfigurable platform without optimized interleaving (gain B)
-\item Co-exploration of interleaving and mapping options (gain C, C$ > $A+B )
+\item \textit{No optimization.} 
+In this case there is no interleaving exploration and the memory architecture consists of a large memory bank. All the data are mapped on the memory bank without any optimization. 
+\item \textit{Memory Size Optimization.} 
+In this case there is no interleaving exploration and the memory architecture consists of four memory banks.
+The optimal size for the memory banks and the optimal mapping of the non-interleaved data on them is explored. 
+The number of memory accesses is the same as in the previous approach.
+However, the data is mapped on an efficient clustered memory architecture.
+\item \textit{Interleaving optimization.} 
+In this case there is the  interleaving exploration step is performed and the memory architecture consists of one large memory bank.
+The optimal interleaving decision is found and applied to the data, so the locality of useful data is increased.
+However, all the data are mapped on one large memory bank.
+The number of accesses is significantly reduced by the interleaving step, but the energy per access is kept high due to lack of data mapping to an efficient clustered architecture.
+\item \textit{Integrated co-exploration.} 
+In this case the co-exploration of both the interleaving and the data-to-memory mapping optimizations are performed.
+Both he number of memory accesses and the energy per access are reduced.
 \end{itemize}
+
+\begin{figure}
+\centering
+	\caption{Motivational Example}
+	\label{fig:example}
+	\includegraphics[scale = 0.5]{Images/Example.eps} 
+\end{figure}
+
+The normalized energy consumption for the motivational example is presented in Fig.\ref{fig:example}.
+The four different approaches are normalized using the conventional case without any optimization.
+Energy results for this benchmark are presented for a word length of 4, 8 and 16 elements, which means that every memory access loads/stores 4,8 or 16 elements. 
+The application code is perfectly suitable for interleaving as discussed in Sec.\ref{sec:motivational}.
+Thus the interleaving exploration has a greater impact that the memory size optimization.
+However, the integrated approach optimizes the energy consumption even further.
+The application is suitable for higher word lengths and there are important gains while moving from 4 to 8 and 16.
+This is explained by the nature of the application that offers good interleaving options for larger words.
+
+\begin{figure}
+\centering
+	\caption{SOR Benchmark}
+	\label{fig:sor}
+	\includegraphics[scale = 0.5]{Images/sor.eps} 
+\end{figure}
+
+The normalized energy consumption for the SOR benchmark is presented in Fig.\ref{fig:sor}.
+The four different approaches are normalized using the conventional case without any optimization.
+Energy results for this benchmark are presented for a word length of 3 and 6, which means that every memory access loads/stores 4 or 8 elements, because the architecture supports word lengths in the power of 2. 
+The interleaving exploration on the application code concludes that it is only possible to make sequential sets of 3 and 6 elements by interleaving the arrays of the application.
+Thus the interleaving exploration alone has a small impact on the reduction of energy consumption for word length of 3 elements.
+The results are even worst for a word length of 6 elements, because the interleaved data have greater size and the conventional mapping of them to the memory is poor.
+The memory size optimization provides more important reduction.
+The integrated approach exploit on a better way the few interleaving options by providing a better mapping of the interleaved data to the memory architecture.
+
+\begin{figure}
+\centering
+	\caption{FFT Benchmark}
+	\label{fig:fft}
+	\includegraphics[scale = 0.5]{Images/fft.eps} 
+\end{figure}
+
+The normalized energy consumption for the FFT benchmark is presented in Fig.\ref{fig:fft}.
+The four different approaches are normalized using the conventional case without any optimization.
+Energy results for this benchmark are presented for a word length of 4 and 8 elements, which are the two viable options provided by the interleaving exploration.
+Again, the integrated approach results in the lower energy consumption.
+The energy gains for a word length of 8 are significantly high, because blocks of 8 words can be constructed by interleaving of application's arrays.
+
+\begin{figure}
+\centering
+	\caption{Motion Estimation Benchmark}
+	\label{fig:mest}
+	\includegraphics[scale = 0.5]{Images/mest.eps} 
+\end{figure}
+
+The normalized energy consumption for the motion estimation benchmark is presented in Fig.\ref{fig:mest}.
+The four different approaches are normalized using the conventional case without any optimization.
+Energy results for this benchmark are presented for a word length of 4, 8 and 16 elements.
+The application code provides good possibilities for interleaving and consequentially the interleaving exploration has a greater impact that the memory size optimization.
+However, the integrated approach optimizes the energy consumption even further.
+In this case the energy gains for increasing size of word length are minimal.
+This is explained by the nature of the application...
 
 \section{Conclusion}
 \label{sec:conclusion}
