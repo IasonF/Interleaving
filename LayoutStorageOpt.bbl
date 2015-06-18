@@ -68,6 +68,17 @@
 \url{http://dx.doi.org/10.1109/LPE.2000.155257}}
 
 
+\bibitem[\protect\citeauthoryear{Brockmeyer, Durinck, Corporaal, and
+  Catthoor}{Brockmeyer et~al\mbox{.}}{2007}]%
+        {6}
+{Erik Brockmeyer}, {Bart Durinck}, {Henk Corporaal}, {and} {Francky Catthoor}.
+  2007.
+\newblock \showarticletitle{Layer assignment techniques for low energy in
+  multi-layered memory organizations}.
+\newblock In {\em Designing Embedded Processors}. Springer, 157--190.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Chen and Sha}{Chen and Sha}{1999}]%
         {chen1999loop}
 {Fei Chen} {and} {Edwin Hsing-Mean Sha}. 1999.
@@ -89,18 +100,6 @@
 \url{http://dx.doi.org/10.1109/ASPDAC.2009.4796580}}
 
 
-\bibitem[\protect\citeauthoryear{Chung, De~Micheli, and Benini}{Chung
-  et~al\mbox{.}}{2002}]%
-        {Chu02}
-{Eui-Young Chung}, {Giovanni De~Micheli}, {and} {Luca Benini}. 2002.
-\newblock \showarticletitle{Contents provider-assisted dynamic voltage scaling
-  for low energy multimedia applications}. In {\em Proceedings of the 2002
-  international symposium on Low power electronics and design} {\em (ISLPED
-  '02)}. 42--47.
-\newblock
-\showISBNx{1-58113-475-4}
-
-
 \bibitem[\protect\citeauthoryear{Filippopoulos, Catthoor, and
   Kjeldsberg}{Filippopoulos et~al\mbox{.}}{2013}]%
         {filippopoulos2013exploration}
@@ -109,42 +108,6 @@
   organisations for dynamic multimedia applications using system scenarios}.
 \newblock {\em Design Automation for Embedded Systems\/} (2013), 1--24.
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{Filippopoulos, Catthoor, Kjeldsberg, Hammari,
-  and Huisken}{Filippopoulos et~al\mbox{.}}{2012}]%
-        {Fil12}
-{Iason Filippopoulos}, {Francky Catthoor}, {Per~Gunnar Kjeldsberg}, {Elena
-  Hammari}, {and} {Jos Huisken}. 2012.
-\newblock \showarticletitle{Memory-aware system scenario approach energy
-  impact}. In {\em NORCHIP, 2012}. 1 --6.
-\newblock
-\showDOI{%
-\url{http://dx.doi.org/10.1109/NORCHP.2012.6403111}}
-
-
-\bibitem[\protect\citeauthoryear{Garcia, Compton, Schulte, Blem, and Fu}{Garcia
-  et~al\mbox{.}}{2006}]%
-        {Garcia}
-{Philip Garcia}, {Katherine Compton}, {Michael Schulte}, {Emily Blem}, {and}
-  {Wenyin Fu}. 2006.
-\newblock \showarticletitle{An overview of reconfigurable hardware in embedded
-  systems}.
-\newblock {\em EURASIP J. Embedded Syst.\/} {2006}, 1 (Jan. 2006), 13--13.
-\newblock
-\showISSN{1687-3955}
-
-
-\bibitem[\protect\citeauthoryear{Gheorghita, , et~al\mbox{.}}{Gheorghita
-  et~al\mbox{.}}{2009}]%
-        {Gheorghita2007}
-{Stefan~Valentin Gheorghita}, {}, {and} {others}. 2009.
-\newblock \showarticletitle{System-scenario-based design of dynamic embedded
-  systems}.
-\newblock {\em ACM Trans. Des. Autom. Electron. Syst.\/} {14}, 1, Article 3
-  (Jan. 2009), 45 pages.
-\newblock
-\showISSN{1084-4309}
 
 
 \bibitem[\protect\citeauthoryear{Gonzalez and Horowitz}{Gonzalez and
@@ -169,28 +132,6 @@
   management}. In {\em Proceedings of the 2000 IEEE/ACM international
   conference on Computer-aided design}. IEEE Press, 431--438.
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{Guthaus, Ringenberg, Ernst, Austin, Mudge, and
-  Brown}{Guthaus et~al\mbox{.}}{2001}]%
-        {mibench}
-{M.R. Guthaus}, {J.S. Ringenberg}, {D. Ernst}, {T.M. Austin}, {T. Mudge}, {and}
-  {R.B. Brown}. 2001.
-\newblock \showarticletitle{MiBench: A free, commercially representative
-  embedded benchmark suite}. In {\em Workload Characterization, 2001. WWC-4.
-  2001 IEEE International Workshop on}. IEEE, 3--14.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Hammari, Catthoor, Huisken, and
-  Kjeldsberg}{Hammari et~al\mbox{.}}{2010}]%
-        {Elena2010}
-{E. Hammari}, {F. Catthoor}, {J. Huisken}, {and} {P~G Kjeldsberg}. 2010.
-\newblock \showarticletitle{Application of medium-grain multiprocessor mapping
-  methodology to epileptic seizure predictor}. In {\em NORCHIP, 2010}. 1 --6.
-\newblock
-\showDOI{%
-\url{http://dx.doi.org/10.1109/NORCHIP.2010.5669489}}
 
 
 \bibitem[\protect\citeauthoryear{Hulzink, Konijnenburg, Ashouei, Breeschoten,
@@ -261,14 +202,14 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Lee, Potkonjak, and Mangione-Smith}{Lee
-  et~al\mbox{.}}{1997}]%
-        {mediabench}
-{C. Lee}, {M. Potkonjak}, {and} {W.H. Mangione-Smith}. 1997.
-\newblock \showarticletitle{MediaBench: a tool for evaluating and synthesizing
-  multimedia and communicatons systems}. In {\em Proceedings of the 30th annual
-  ACM/IEEE international symposium on Microarchitecture}. IEEE Computer
-  Society, 330--335.
+\bibitem[\protect\citeauthoryear{Kulkarni, Ghez, Miranda, Catthoor, and
+  De~Man}{Kulkarni et~al\mbox{.}}{2005}]%
+        {5}
+{Chidamber Kulkarni}, {C Ghez}, {Miguel Miranda}, {Francky Catthoor}, {and}
+  {Hugo De~Man}. 2005.
+\newblock \showarticletitle{Cache conscious data layout organization for
+  conflict miss reduction in embedded multimedia applications}.
+\newblock {\em Computers, IEEE Transactions on\/} {54}, 1 (2005), 76--81.
 \newblock
 
 
@@ -301,14 +242,13 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Marchal, Bruni, Gomez, Benini, Pinuel,
-  Catthoor, and Corporaal}{Marchal et~al\mbox{.}}{2003}]%
-        {Mar03}
-{P. Marchal}, {D. Bruni}, {J.I. Gomez}, {L. Benini}, {L. Pinuel}, {F.
-  Catthoor}, {and} {H. Corporaal}. 2003.
-\newblock \showarticletitle{SDRAM-Energy-Aware memory allocation for dynamic
-  multi-media applications on multi-processor platforms}. In {\em Design,
-  Automation and Test in Europe Conference and Exhibition, 2003}. 516--521.
+\bibitem[\protect\citeauthoryear{Manjikian and Abdelrahman}{Manjikian and
+  Abdelrahman}{1995}]%
+        {4}
+{Naraig Manjikian} {and} {Tarek Abdelrahman}. 1995.
+\newblock \showarticletitle{Array data layout for the reduction of cache
+  conflicts}. In {\em Proceedings of the 8th International Conference on
+  Parallel and Distributed Computing Systems}. Citeseer, 1--8.
 \newblock
 
 
@@ -344,48 +284,38 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Palkovic et~al\mbox{.}}{Palkovic
-  et~al\mbox{.}}{2006}]%
-        {Pal06b}
-{Martin Palkovic} {and} {others}. 2006.
-\newblock \showarticletitle{Systematic Preprocessing of Data Dependent
-  Constructs for Embedded Systems}.
-\newblock {\em Journal of Low Power Electronics, Volume 2, Number 1\/} (2006).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Palkovic, Catthoor, and Corporaal}{Palkovic
-  et~al\mbox{.}}{2006}]%
-        {Pal06}
-{Martin Palkovic}, {Francky Catthoor}, {and} {Henk Corporaal}. 2006.
-\newblock In {\em Proc. of the 4th Workshop on Optimizations for DSP and
-  Embedded Systems}. IEEE and ACM SIGMICRO, 21--30.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Palkovic, Corporaal, and Catthoor}{Palkovic
-  et~al\mbox{.}}{2007}]%
-        {Pal07}
-{M. Palkovic}, {H. Corporaal}, {and} {F. Catthoor}. 2007.
-\newblock \showarticletitle{Heuristics for Scenario Creation to Enable General
-  Loop Transformations}. In {\em System-on-Chip, 2007 International Symposium
-  on}. 1 --4.
-\newblock
-\showISSN{07EX1846C}
-\showDOI{%
-\url{http://dx.doi.org/10.1109/ISSOC.2007.4427430}}
-
-
 \bibitem[\protect\citeauthoryear{Panda et~al\mbox{.}}{Panda
-  et~al\mbox{.}}{2001}]%
+  et~al\mbox{.}}{2001b}]%
         {Pgk01}
-{P.~R. Panda} {and} {others}. 2001.
+{P.~R. Panda} {and} {others}. 2001b.
 \newblock \showarticletitle{Data and memory optimization techniques for
   embedded systems}.
 \newblock {\em ACM Trans. Des. Autom. Electron. Syst.\/} {6}, 2 (April 2001),
   149--206.
 \newblock
 \showISSN{1084-4309}
+
+
+\bibitem[\protect\citeauthoryear{Panda, Dutt, and Nicolau}{Panda
+  et~al\mbox{.}}{1999}]%
+        {7}
+{Preeti~Ranjan Panda}, {Nikil~D Dutt}, {and} {Alexandru Nicolau}. 1999.
+\newblock {\em Memory issues in embedded systems-on-chip: optimizations and
+  exploration}.
+\newblock Springer Science \& Business Media.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Panda, Dutt, Nicolau, Catthoor, Vandecappelle,
+  Brockmeyer, Kulkarni, and De~Greef}{Panda et~al\mbox{.}}{2001a}]%
+        {8}
+{P~Ranjan Panda}, {Nikil~D Dutt}, {Alexandru Nicolau}, {Francky Catthoor},
+  {Arnout Vandecappelle}, {Erik Brockmeyer}, {Chidamber Kulkarni}, {and} {Eddy
+  De~Greef}. 2001a.
+\newblock \showarticletitle{Data memory organization and optimizations in
+  application-specific systems}.
+\newblock {\em IEEE Design \& Test of Computers\/} 3 (2001), 56--57.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Passes, Sha, and Chao}{Passes
@@ -396,14 +326,6 @@
   design optimization}. In {\em Computer Design: VLSI in Computers and
   Processors, 1995. ICCD'95. Proceedings., 1995 IEEE International Conference
   on}. IEEE, 440--445.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Pouchet}{Pouchet}{}]%
-        {Poly}
-{L.N. Pouchet}.
-\newblock PolyBench: The Polyhedral Benchmark suite.
-\newblock   (????).
 \newblock
 
 

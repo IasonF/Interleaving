@@ -26,16 +26,16 @@
 \begin{document}
 
 % Page heads
-\markboth{I. Filippopoulos et al.}{Data Interleaving and Memory Mapping on VLIW architectures}
+\markboth{I. Filippopoulos et al.}{Data Interleaving and Memory Mapping on SIMD architectures}
 
 % Title portion
-\title{Integrated Optimization Methodology for Data Interleaving and Memory Mapping Exploration on VLIW architectures}
+\title{Integrated Exploration Methodology for Data Interleaving and Data-to-Memory Mapping on SIMD architectures}
 \author{IASON FILIPPOPOULOS
 \affil{Norwegian University of Science and Technology}
 NAMITA SHARMA 
 \affil{Indian Institute of Technology Delhi}
 FRANCKY CATTHOOR
-\affil{IMEC}
+\affil{IMEC \& K.U. Leuven}
 PER GUNNAR KJELDSBERG
 \affil{Norwegian University of Science and Technology}
 PREETI PANDA
@@ -44,21 +44,25 @@ PREETI PANDA
 
 \begin{abstract}
 This work presents a methodology for efficient exploration of data interleaving and data-to-memory mapping options for SIMD (Single Instruction Multiple Data) platform architectures.
-The system architecture includes VLIW (Very Long Instruction Word) function units and a reconfigurable clustered memory. 
-The scope is the reduction of the overall energy consumption by increasing the utilization of the function units and decreasing the number of memory accesses.
+The system architecture consists of  a reconfigurable clustered scratch-pad memory and a SIMD function unit, which performs the same operation on multiple input data in parallel. 
+The memory accesses have an important contribution on the overall energy consumption of an embedded system executing a data intensive task. 
+The scope of this work is the reduction of the overall energy consumption by increasing the utilization of the function units and decreasing the number of memory accesses.
 The presented methodology is tested using a number of benchmark applications with irregularities on their access scheme.
 Potential gains are calculated based on the energy models both for the processing and the memory part of the system.
+The improvement on the energy consumption after efficient interleaving and mapping of data is approximately between 40\% and 80\% for the studied benchmarks.
 \end{abstract}
 
 \category{D.2.2}{Design Tools and Techniques}{Design, Methodologies}
 \category{B.7.1}{Types and Design Styles}{Memory Technologies, Design}
 \category{B.8.2}{Performance Analysis and Design Aids}{}
+\category{C.3}{Special purpose and Application-Based Systems}{Real-time and Embedded Systems}
+\category{E.1}{Data Structures}{Arrays}
 
 \terms{Design, Algorithms, Performance}
 
-\keywords{Data interleaving, single instruction multiple data (SIMD), system scenarios, design space exploration, memory reconfiguration}
+\keywords{Data Interleaving, Single Instruction Multiple Data (SIMD) Architectures, Design Space Exploration, Memory Reconfiguration, Data Layout, Energy Optimization}
 
-%\acmformat{Iason Filippopoulos, Namita Sharma, Francky Catthoor, Per Gunnar Kjeldsberg, Preeti Panda, 2015. Integrated Optimization Methodology for Data Interleaving and Memory Mapping Exploration on VLIW architectures.}
+%\acmformat{Iason Filippopoulos, Namita Sharma, Francky Catthoor, Per Gunnar Kjeldsberg, Preeti Panda, 2015. Integrated Optimization Methodology for Data Interleaving and Memory Mapping Exploration on SIMD architectures.}
 
 %\begin{bottomstuff}
 %Author's addresses: Iason Filippopoulos {and} Per Gunnar Kjeldsberg, Department of Electronics and Telecommunications, Norwegian University of Science and Technology (NTNU), Trondheim, Norway; Namita Sharma  {and} Preeti Panda, Department of Computer Science and Engineering, Indian Institute of Technology Delhi, New Delhi, India; Francky Catthoor, IMEC, Leuven, Belgium.
@@ -68,12 +72,22 @@ Potential gains are calculated based on the energy models both for the processin
 
 \section{Introduction}
 
-The goal of this work is to improve both the performance and the energy consumption for data intensive applications. 
-We focus on single instruction, multiple data (SIMD) architectures and deal with applications that have irregularities on their access scheme. 
+The energy is an important limitation factor on modern embedded systems.
+New novel hardware solutions have been proposed to reduce the energy consumption.
+On the processing side, SIMD architectures offer new possibilities for potential improvements on the performance and the energy consumption.
+On the memory side, modern memory architectures provide different energy modes and clustered scratch-pad memory banks can operate independently offering more options for reducing energy consumption.
+Dynamic and data intensive algorithms are implemented on embedded systems.
+Data intensive applications have often irregular memory accesses, meaning that the data in memory are not accessed always in order.
+The lack of spatial locality and the presence of redundant data results in lower utilization of the hardware resources, providing that a conventional approach is employed for the handling of data.
+This problem motivates the development of a methodology to improve the management of the data.
+
+In order to tackle this problem we propose an interleaving exploration that aims to increase spatial locality and reduce the memory accesses on redundant data.
+The goal of this work is to improve the energy consumption for data intensive applications without any loss on the application's performance. 
+We focus on single instruction multiple data (SIMD) architectures and explore applications that have irregularities on their access scheme. 
 SIMD architectures can potentially increase the performance of an application, providing that the utilization of them is high. 
 However, applications with irregular access patterns do not provide compact sequences of data that are suitable for high utilization. 
-Hence the performance is lower than expected. 
-In order to improve the performance a systematic exploration of the interleaving options for application's data is needed. 
+Hence the performance is lower than expected and the number of memory accesses is high due to redundant memory accesses. 
+In order to reduce the number of memory accesses and achieve higher utilization of the system architecture a systematic exploration of the interleaving options for application's data is needed. 
 
 The energy consumption can be divided into two parts, namely the processing and the memory subsystem. 
 The energy needed for processing depends mainly on the utilization of the FUs and any potential stalls, if the memory cannot provide data on the needed rate.
@@ -142,50 +156,35 @@ The energy consumption due to memory leakage is also lower, as the access time f
 \section{Related work}
 \label{sec:related}
 
-The current work combines and expands the interleaving exploration presented in \cite{sharma2013data} and the data to memory mapping methodology presented in \cite{filippopoulos2013exploration}. Data layout optimizations aim to arrange data in memory with the objective of improving system performance and energy through means such as reduced memory access count or reduced cache misses. Several more generic data layout techniques have been explored by researchers at various levels in the memory hierarchy. But these are not well matched to our context of LTE optimisations. In particular, Cache partitioning [4], a layout technique for arrays, maps each array to different cache partitions to reduce conflicts. Kulkarni et al. [5] addressed the problem for cache miss reduction by evaluating the tiling size for arrays and merging the arrays appropriately for each loop nest. Memory Hierarchy Layer Assignment (MHLA), an optimization methodology for data memory hierarchy [6], determines for each data set an appropriate layer in the hierarchy and type of memory (single/dual port) taking data re-use into account. The strategy in [7] partitions the variables to Scratch Pad Memory and DRAM in a way that interference among different variables is minimized. To the best of our knowledge, no work has been presented yet for an efficient data layout for LTE. And the cache-oriented general techniques proposed earlier by researchers [8] do not find a straightforward application in our context, where the target system hardware consists of a coarse grained re-configurable array (CGRA) of SIMD functional units and vector registers.
+Many studies have been published in the area of data layout transformations and memory management. 
+This work differentiates by presenting an integrated approach that combines the two areas. 
+The combination is performed in a systematic way and the final result is better than an independent application of the two optimizations.
+The data transformations on the application level are studied in combination with the data-to-memory mapping on the hardware level.
+An overview of the related work on those two areas is presented.
 
-The memory allocation problem has been studied before. 
-However, we extend state of the art by proposing a more generic approach, which is also suitable for applications with input driven dynamic behaviour. 
-The authors in \cite{Ben00b} present a methodology to generate a static application-specific memory hierarchy. 
-Later, they extend their work in \cite{Ben00c} to a reconfigurable platform with multiple memory banks. 
-However, our work differentiates by proposing a more generic and application agnostic methodology and employing the use of system scenarios, in order to efficiently handle a wider range of dynamic application characteristics. 
+Data layout optimizations aim to arrange data in memory with the objective of improving system performance and energy through means such as reduced memory access count or reduced cache misses. 
+Several more generic data layout techniques have been explored by researchers at various levels in the memory hierarchy. 
+In \cite{4},  cache partitioning , a layout technique for arrays, maps each array to different cache partitions to reduce conflicts. 
+In \cite{5} authors address the problem for cache miss reduction by evaluating the tiling size for arrays and merging the arrays appropriately for each loop nest. 
+Memory Hierarchy Layer Assignment (MHLA), an optimization methodology for data memory hierarchy presented in \cite{6}, determines for each data set an appropriate layer in the hierarchy and type of memory (single/dual port) taking data re-use into account. 
+The strategy in \cite{7} partitions the variables to scratch-pad memory and DRAM in a way that interference among different variables is minimized. 
+ The cache-oriented techniques proposed earlier by researchers in \cite{8} do not find a straightforward application in our context, where the target system hardware consists of a scratch-pad memory and a SIMD functional unit.
+ The current work explores the assignment of data to the memory and the effect of different interleaving decisions on the overall energy consumption.
 
 Several techniques for designing energy efficient memory architectures for embedded systems are presented in \cite{Mac02}. 
 The current work differentiates by employing a platform that is reconfigurable at run-time. 
 In \cite{Pgk01} a large number of data and memory optimisation techniques, that could be dependent or independent of a target platform, are discussed. 
-Again, reconfigurable platforms are not considered.
-
-Energy-aware assignment of data to memory banks for several task-sets based on the MediaBench suit of benchmarks is presented in \cite{Mar03}. 
-Low energy multimedia applications are discussed also in \cite{Chu02} with focus on processing rather than the memory platform. 
-Furthermore, both \cite{Mar03} and \cite{Chu02} base their analysis on use case situations and do not incorporate sufficient support for very dynamically behaving application codes. 
-System scenarios alleviate this bottleneck and enable handling of such dynamic behaviour. 
-In addition, the current work explores the assignment of data to the memory and the effect of different assignment decisions on the overall energy consumption.
+Again, reconfigurable platforms are not considered. 
+The authors in \cite{Ben00b} present a methodology to generate a static application-specific memory hierarchy. 
+Later, they extend their work in \cite{Ben00c} to a reconfigurable platform with multiple memory banks. 
 
 The authors in \cite{abraham1999automatic}, \cite{jacob1996analytical} and \cite{li1999hardware} present methodologies for designing memory hierarchies.
 Design methods with main focus on the traffic and latencies in the memory architecture are presented in \cite{chen1999loop}, \cite{grun2000mist}, \cite{jantsch1994hardware} and \cite{passes1995multi}.
 Improving memory energy efficiency based on a study of access patterns is discussed in \cite{kandemir2001improving}.
 Application specific memory design is a research topic in \cite{schmit1997synthesis}, while memory design for multimedia applications is presented in \cite{oshima1997high}.
-The current work differentiates by introducing the concept of system scenarios that supports the dynamic handling of application's requirements, although the data mapping is static inside each scenario. 
+The current work differentiates by presenting both a reconfigurable platform and the necessary data interleaving to better exploit the platform.
 
-An overview of work on system scenario methodologies and their application are presented in \cite{Gheorghita2007}. 
-In \cite{Fil12} extensions towards a memory-aware system scenario methodology are presented and demonstrated using theoretical memory models and two target applications. 
-This work is an extension both in complexity and accuracy of the considered memory library and on the number of target applications. 
-
-Furthermore, the majority of the published work focus on control variables for system scenario prediction and selection. 
-Control variables can take a relatively small set of different values and thus can be fully explored. However, the use of data variables \cite{Elena2010} is required by many dynamic systems including the majority of multimedia applications. 
-The range of possible values for data variables is wider and makes full exploration impossible. 
-
-Authors in \cite{Pal06} present a technique to optimise memory accesses for input data dependent applications by duplicating and optimising the code for different execution paths of a control flow graph (CFG). 
-One path or a group of paths in a CFG form a scenario and its memory accesses are optimised using global loop transformations (GLT). 
-Apart from if-statement evaluations that define different execution paths, they extend their technique to include while loops with variable trip count in \cite{Pal06b}. 
-A heuristic to perform efficient grouping of execution paths for scenario creation is analysed in \cite{Pal07}. 
-Our work extends the existing solutions towards exploiting the presence of a distributed memory organisation with reconfiguration possibilities.
-
-Reconfigurable hardware for embedded systems, including the memory architecture, is a topic of active research. 
-An extensive overview of current approaches is found in \cite{Garcia}. 
-The approach presented in this paper differentiates by focusing on the data-to-memory assignment aspects in the presence of a platform with dynamically configurable memory blocks. 
-Moreover, many methods for source code transformations, and especially loop transformations, have been proposed in the memory management context. 
-These methods are fully complementary to our focus on data-to-memory assignment and should be performed prior to our step. 
+The current work combines and expands the interleaving exploration presented in \cite{sharma2013data} and the data to memory mapping methodology presented in \cite{filippopoulos2013exploration}. 
 
 \section{System Design Exploration Work-flow}
 \label{sec:methodology}
@@ -251,7 +250,7 @@ The overall number of memory accesses is reduced, as each access has a higher ut
 This idea is illustrated in Fig.\ref{fig:algebra}.
 The number of memory accesses for each case can be calculated by assuming that each memory access loads four array elements, i.e. the word length for the memory and bus architecture is four elements.
 Each time an element from the array $A$ or $B$ is needed, the memory access returns four elements, from which one is the useful and the other three are not used by the running code.
-On the case of the interleaved array, each memory access returns four elements, from which two are useful and two useless.
+On the case of the interleaved array, each memory access returns four elements, from which two are useful and two redundant.
 Thus, the number of overall memory access in the second case is reduced in half compared to the first case.
 
 \begin{figure}
@@ -336,7 +335,7 @@ Should I add tables as well?
 \subsection{Function Unit Models}
 
 We have used an extension of the DRESC compiler framework [10] for mapping the reference application to a CGRA architecture.
-The CGRA part comprises one SIMD enabled functional units (FU) and a central vector register file which is also coupled to a VLIW processor. 
+The CGRA part comprises one SIMD enabled functional units (FU) and a central vector register file. 
 For efficient utilization of the vector FU, the register file has a wide interface (256 bit wide) with the scratchpad memory and allows testing for word length of 4, 8 and 16 elements, assuming that each array element is a 16 bit wide.  
 
 \section{Applications}
