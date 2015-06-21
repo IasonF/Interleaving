@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.24)  17 JUN 2015 13:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2014.6.24)  21 JUN 2015 19:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -28,18 +28,13 @@ Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 137.
+Package color Info: Driver file: dvips.def on input line 137.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count79
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
 ))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
@@ -57,14 +52,14 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: dvips.def on input line 91.
 )
 \Gin@req@height=\dimen102
 \Gin@req@width=\dimen103
 )
 Document Class `acmsmall' Electronic Submissions v1.4 <July 09, 2012> (ACM).
-\@firstpg=\count80
-\@lastpg=\count81
+\@firstpg=\count79
+\@lastpg=\count80
 \trimheight=\dimen104
 \trimwidth=\dimen105
 \normaltextheight=\dimen106
@@ -78,20 +73,20 @@ LaTeX Font Info:    Redeclaring math symbol \bigsqcup on input line 2319.
 \footheight=\skip41
 \@maxsep=\skip42
 \@dblmaxsep=\skip43
-\@totalpg=\count82
+\@totalpg=\count81
 \@abstract=\box28
 \@permissionbox=\box29
-\c@part=\count83
-\c@section=\count84
-\c@subsection=\count85
-\c@subsubsection=\count86
-\c@paragraph=\count87
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
 \enumdim=\dimen110
-\c@theorem=\count88
+\c@theorem=\count87
 \belowcaptionskip=\skip44
 \abovecaptionskip=\skip45
-\c@figure=\count89
-\c@table=\count90
+\c@figure=\count88
+\c@table=\count89
 \@narrowfig=\dimen111
 \@nfigbox=\box30
 \@nfcapbox=\box31
@@ -104,7 +99,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbb' in version `bold'
 (Font)                  OT1/ams/bx/n --> OT1/ams/bx/n on input line 3902.
 ) (./algorithm2e.sty
 Package: algorithm2e 2008/00/00 v3.10 algorithms environments
-\c@AlgoLine=\count91
+\c@AlgoLine=\count90
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
@@ -147,9 +142,9 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algoheightrule=\skip57
 \algotitleheightruledefault=\skip58
 \algotitleheightrule=\skip59
-\c@algocfline=\count92
-\c@algocfproc=\count93
-\c@algocf=\count94
+\c@algocfline=\count91
+\c@algocfproc=\count92
+\c@algocf=\count93
 \algocf@algoframe=\box39
 \algocf@algobox=\box40
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
@@ -175,67 +170,6 @@ LaTeX Font Info:    Try loading font information for OT1+pnc on input line 26.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pnc.fd
 File: ot1pnc.fd 2001/06/04 font definitions for OT1/pnc.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count95
-\scratchdimen=\dimen120
-\scratchbox=\box41
-\nofMPsegments=\count96
-\nofMParguments=\count97
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count98
-\MPscratchDim=\dimen121
-\MPnumerator=\count99
-\makeMPintoPDFobject=\count100
-\everyMPtoPDFconversion=\toks16
-) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 71.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1phv.fd
@@ -253,224 +187,52 @@ Underfull \vbox (badness 1014) has occurred while \output is active []
 
 Overfull \vbox (72.27pt too high) has occurred while \output is active []
 
- [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-Non-PDF special ignored!
+ [1
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 122.
+(Font)              <7> on input line 121.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 122.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 122.
+(Font)              <5> on input line 121.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 121.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 125.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 125.
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <9> not available
 (Font)              Font shape `OT1/pnc/b/n' tried instead on input line 128.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 128.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 128.
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <10> not available
 (Font)              Font shape `OT1/pnc/b/n' tried instead on input line 129.
  [2]
-Package epstopdf Info: Source file: <Images/motivation.eps>
-(epstopdf)                    date: 2015-05-10 00:38:30
-(epstopdf)                    size: 207487 bytes
-(epstopdf)             Output file: <Images/motivation-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-10 21:58:21
-(epstopdf)                    size: 26169 bytes
-(epstopdf)             Command: <repstopdf --outfile=Images/motivation-eps-conv
-erted-to.pdf Images/motivation.eps>
-(epstopdf)             \includegraphics on input line 144.
-Package epstopdf Info: Output file is already uptodate.
+File: Images/motivation2.eps Graphic file (type eps)
 
-<Images/motivation-eps-converted-to.pdf, id=18, 811.03pt x 563.10374pt>
-File: Images/motivation-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Images/motivation-eps-converted-to.pdf>
-Package pdftex.def Info: Images/motivation-eps-converted-to.pdf used on input l
-ine 144.
-(pdftex.def)             Requested size: 405.514pt x 281.55118pt.
-
-Overfull \hbox (9.514pt too wide) in paragraph at lines 144--145
- [][] 
- []
-
-[3 <./Images/motivation-eps-converted-to.pdf>] [4]
-Package epstopdf Info: Source file: <Images/Workflow.eps>
-(epstopdf)                    date: 2014-01-22 14:05:03
-(epstopdf)                    size: 310193 bytes
-(epstopdf)             Output file: <Images/Workflow-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-10 21:58:22
-(epstopdf)                    size: 62550 bytes
-(epstopdf)             Command: <repstopdf --outfile=Images/Workflow-eps-conver
-ted-to.pdf Images/Workflow.eps>
-(epstopdf)             \includegraphics on input line 206.
-Package epstopdf Info: Output file is already uptodate.
-
-<Images/Workflow-eps-converted-to.pdf, id=37, 424.58624pt x 715.67375pt>
-File: Images/Workflow-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Images/Workflow-eps-converted-to.pdf>
-Package pdftex.def Info: Images/Workflow-eps-converted-to.pdf used on input lin
-e 206.
-(pdftex.def)             Requested size: 212.2926pt x 357.836pt.
-Package epstopdf Info: Source file: <Images/AHpattern.eps>
-(epstopdf)                    date: 2015-05-26 17:40:48
-(epstopdf)                    size: 92891 bytes
-(epstopdf)             Output file: <Images/AHpattern-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-10 21:58:23
-(epstopdf)                    size: 22922 bytes
-(epstopdf)             Command: <repstopdf --outfile=Images/AHpattern-eps-conve
-rted-to.pdf Images/AHpattern.eps>
-(epstopdf)             \includegraphics on input line 215.
-Package epstopdf Info: Output file is already uptodate.
-
-<Images/AHpattern-eps-converted-to.pdf, id=38, 668.4975pt x 181.67876pt>
-File: Images/AHpattern-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Images/AHpattern-eps-converted-to.pdf>
-Package pdftex.def Info: Images/AHpattern-eps-converted-to.pdf used on input li
-ne 215.
-(pdftex.def)             Requested size: 334.24792pt x 90.83914pt.
-
+<Images/motivation2.eps> [3] [4] [5]
+File: Images/Workflow.eps Graphic file (type eps)
+ <Images/Workflow.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./Images/Workflow-eps-converted-to.pdf> <./Images/AHpattern-eps-converted-
-to.pdf>]
-Package epstopdf Info: Source file: <Images/Algebra.eps>
-(epstopdf)                    date: 2015-06-07 21:57:39
-(epstopdf)                    size: 73607 bytes
-(epstopdf)             Output file: <Images/Algebra-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-10 21:58:24
-(epstopdf)                    size: 15601 bytes
-(epstopdf)             Command: <repstopdf --outfile=Images/Algebra-eps-convert
-ed-to.pdf Images/Algebra.eps>
-(epstopdf)             \includegraphics on input line 260.
-Package epstopdf Info: Output file is already uptodate.
-
-<Images/Algebra-eps-converted-to.pdf, id=77, 525.965pt x 355.3275pt>
-File: Images/Algebra-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Images/Algebra-eps-converted-to.pdf>
-Package pdftex.def Info: Images/Algebra-eps-converted-to.pdf used on input line
- 260.
-(pdftex.def)             Requested size: 262.98184pt x 177.6633pt.
-
-Underfull \vbox (badness 1286) has occurred while \output is active []
 
  [6]
-Package epstopdf Info: Source file: <Images/Architecture.eps>
-(epstopdf)                    date: 2014-01-22 14:04:17
-(epstopdf)                    size: 139726 bytes
-(epstopdf)             Output file: <Images/Architecture-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-10 21:58:24
-(epstopdf)                    size: 34209 bytes
-(epstopdf)             Command: <repstopdf --outfile=Images/Architecture-eps-co
-nverted-to.pdf Images/Architecture.eps>
-(epstopdf)             \includegraphics on input line 303.
-Package epstopdf Info: Output file is already uptodate.
+File: Images/AHpattern.eps Graphic file (type eps)
 
-<Images/Architecture-eps-converted-to.pdf, id=81, 428.60126pt x 504.88625pt>
-File: Images/Architecture-eps-converted-to.pdf Graphic file (type pdf)
+<Images/AHpattern.eps> [7]
+File: Images/Algebra.eps Graphic file (type eps)
+ <Images/Algebra.eps> [8]
+File: Images/Architecture.eps Graphic file (type eps)
+ <Images/Architecture.eps>
+[9] [10]
+File: Images/Example.eps Graphic file (type eps)
+ <Images/Example.eps>
+File: Images/sor.eps Graphic file (type eps)
+ <Images/sor.eps> [11] [12]
+File: Images/fft.eps Graphic file (type eps)
+ <Images/fft.eps>
+File: Images/mest.eps Graphic file (type eps)
 
-<use Images/Architecture-eps-converted-to.pdf>
-Package pdftex.def Info: Images/Architecture-eps-converted-to.pdf used on input
- line 303.
-(pdftex.def)             Requested size: 214.3001pt x 252.44249pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./Images/Algebra-eps-converted-to.pdf>] [8 <./Images/Architecture-eps-conv
-erted-to.pdf>]
-Underfull \vbox (badness 1107) has occurred while \output is active []
-
- [9]
-Package epstopdf Info: Source file: <Images/Example.eps>
-(epstopdf)                    date: 2015-06-17 02:51:45
-(epstopdf)                    size: 10385 bytes
-(epstopdf)             Output file: <Images/Example-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-17 09:48:03
-(epstopdf)                    size: 7856 bytes
-(epstopdf)             Command: <repstopdf --outfile=Images/Example-eps-convert
-ed-to.pdf Images/Example.eps>
-(epstopdf)             \includegraphics on input line 405.
-Package epstopdf Info: Output file is already uptodate.
-
-<Images/Example-eps-converted-to.pdf, id=110, 511.9125pt x 434.62375pt>
-File: Images/Example-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Images/Example-eps-converted-to.pdf>
-Package pdftex.def Info: Images/Example-eps-converted-to.pdf used on input line
- 405.
-(pdftex.def)             Requested size: 255.95563pt x 217.31134pt.
-Package epstopdf Info: Source file: <Images/sor.eps>
-(epstopdf)                    date: 2015-06-17 02:51:46
-(epstopdf)                    size: 9935 bytes
-(epstopdf)             Output file: <Images/sor-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-17 09:48:04
-(epstopdf)                    size: 8122 bytes
-(epstopdf)             Command: <repstopdf --outfile=Images/sor-eps-converted-t
-o.pdf Images/sor.eps>
-(epstopdf)             \includegraphics on input line 421.
-Package epstopdf Info: Output file is already uptodate.
-
-<Images/sor-eps-converted-to.pdf, id=111, 511.9125pt x 434.62375pt>
-File: Images/sor-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Images/sor-eps-converted-to.pdf>
-Package pdftex.def Info: Images/sor-eps-converted-to.pdf used on input line 421
-.
-(pdftex.def)             Requested size: 255.95563pt x 217.31134pt.
-
-Underfull \vbox (badness 6110) has occurred while \output is active []
-
- [10 <./Images/Example-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <Images/fft.eps>
-(epstopdf)                    date: 2015-06-17 02:51:47
-(epstopdf)                    size: 9935 bytes
-(epstopdf)             Output file: <Images/fft-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-17 09:48:05
-(epstopdf)                    size: 7959 bytes
-(epstopdf)             Command: <repstopdf --outfile=Images/fft-eps-converted-t
-o.pdf Images/fft.eps>
-(epstopdf)             \includegraphics on input line 437.
-Package epstopdf Info: Output file is already uptodate.
-
-<Images/fft-eps-converted-to.pdf, id=120, 511.9125pt x 434.62375pt>
-File: Images/fft-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Images/fft-eps-converted-to.pdf>
-Package pdftex.def Info: Images/fft-eps-converted-to.pdf used on input line 437
-.
-(pdftex.def)             Requested size: 255.95563pt x 217.31134pt.
-Package epstopdf Info: Source file: <Images/mest.eps>
-(epstopdf)                    date: 2015-06-17 02:51:47
-(epstopdf)                    size: 10411 bytes
-(epstopdf)             Output file: <Images/mest-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-17 09:48:06
-(epstopdf)                    size: 8015 bytes
-(epstopdf)             Command: <repstopdf --outfile=Images/mest-eps-converted-
-to.pdf Images/mest.eps>
-(epstopdf)             \includegraphics on input line 450.
-Package epstopdf Info: Output file is already uptodate.
-
-<Images/mest-eps-converted-to.pdf, id=121, 511.9125pt x 434.62375pt>
-File: Images/mest-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Images/mest-eps-converted-to.pdf>
-Package pdftex.def Info: Images/mest-eps-converted-to.pdf used on input line 45
-0.
-(pdftex.def)             Requested size: 255.95563pt x 217.31134pt.
- (./LayoutStorageOpt.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <./Images/sor-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12 <./Images/fft-eps-converted-to.pdf> <./Images/mest-eps-converted-to.pdf>]
+<Images/mest.eps> (./LayoutStorageOpt.bbl
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 56.
 
@@ -479,40 +241,27 @@ Underfull \hbox (badness 1454) in paragraph at lines 48--57
  of Com-put-ers, IEEE \OT1/pnc/m/n/8 17, 2 (apr-jun 2000), 74 --85.
  []
 
+[13]
+Underfull \vbox (badness 1910) has occurred while \output is active []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
+ [14]
 Underfull \hbox (badness 2486) in paragraph at lines 355--362
 []\OT1/pnc/m/n/8 T. Simu-nic, L. Benini, and G. De Micheli. 1999. Cycle-accurat
 e sim-u-la-tion of en-ergy con-sump-
  []
 
-) [14] (./LayoutStorageOpt.aux) ) 
-Here is how much of TeX's memory you used:
- 3462 strings out of 493117
- 47185 string characters out of 6135433
- 132602 words of memory out of 5000000
- 6862 multiletter control sequences out of 15000+600000
- 29799 words of font info for 62 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 38i,11n,27p,396b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/
-dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-t8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on LayoutStorageOpt.pdf (14 pages, 312727 bytes).
-PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+) [15] (./LayoutStorageOpt.aux)
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2618 strings out of 493118
+ 33342 string characters out of 6135459
+ 111133 words of memory out of 5000000
+ 6075 multiletter control sequences out of 15000+600000
+ 15814 words of font info for 48 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 32i,11n,27p,396b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on LayoutStorageOpt.dvi (15 pages, 59232 bytes).
