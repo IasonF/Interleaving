@@ -79,6 +79,14 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Cadence}{Cadence}{}]%
+        {cadencecompiler}
+{RTL Cadence}.
+\newblock Compiler User’s Manual.
+\newblock   (????).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Chen and Sha}{Chen and Sha}{1999}]%
         {chen1999loop}
 {Fei Chen} {and} {Edwin Hsing-Mean Sha}. 1999.
@@ -170,6 +178,14 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Kai and Zhiwei}{Kai and Zhiwei}{2003}]%
+        {kai2003synopsys}
+{Wang Kai} {and} {Xu Zhiwei}. 2003.
+\newblock Synopsys Prime Power Manual Release U-2003.06-QA.
+\newblock   (2003).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Kandemir, Sezer, and Delaluz}{Kandemir
   et~al\mbox{.}}{2001}]%
         {kandemir2001improving}
@@ -210,6 +226,16 @@
 \newblock \showarticletitle{Cache conscious data layout organization for
   conflict miss reduction in embedded multimedia applications}.
 \newblock {\em Computers, IEEE Transactions on\/} {54}, 1 (2005), 76--81.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Lee, Choi, and Dutt}{Lee
+  et~al\mbox{.}}{2003}]%
+        {lee2003compilation}
+{Jongeun Lee}, {Kiyoung Choi}, {and} {Nikil~D Dutt}. 2003.
+\newblock \showarticletitle{Compilation approach for coarse-grained
+  reconfigurable architectures}.
+\newblock  (2003).
 \newblock
 
 
