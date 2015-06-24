@@ -42,30 +42,24 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Benini et~al\mbox{.}}{Benini
-  et~al\mbox{.}}{2000a}]%
+\bibitem[\protect\citeauthoryear{Benini, Macii, Macii, and Poncino}{Benini
+  et~al\mbox{.}}{2000b}]%
         {Ben00c}
-{L. Benini} {and} {others}. 2000a.
+{Luca Benini}, {Alberto Macii}, {Enrico Macii}, {and} {Massimo Poncino}. 2000b.
 \newblock \showarticletitle{Increasing energy efficiency of embedded systems by
   application-specific memory hierarchy generation}.
-\newblock {\em Design Test of Computers, IEEE\/} {17}, 2 (apr-jun 2000), 74
-  --85.
+\newblock {\em IEEE Design \& Test of Computers\/} 2 (2000), 74--85.
 \newblock
-\showISSN{0740-7475}
-\showDOI{%
-\url{http://dx.doi.org/10.1109/54.844336}}
 
 
 \bibitem[\protect\citeauthoryear{Benini, Macii, and Poncino}{Benini
-  et~al\mbox{.}}{2000b}]%
+  et~al\mbox{.}}{2000a}]%
         {Ben00b}
-{L. Benini}, {A. Macii}, {and} {M. Poncino}. 2000b.
+{Luca Benini}, {Alberto Macii}, {and} {Massimo Poncino}. 2000a.
 \newblock \showarticletitle{A recursive algorithm for low-power memory
-  partitioning}. In {\em Low Power Electronics and Design, 2000. ISLPED '00.
-  Proceedings of the 2000 International Symposium on}. 78 -- 83.
+  partitioning}. In {\em Low Power Electronics and Design, 2000. ISLPED'00.
+  Proceedings of the 2000 International Symposium on}. IEEE, 78--83.
 \newblock
-\showDOI{%
-\url{http://dx.doi.org/10.1109/LPE.2000.155257}}
 
 
 \bibitem[\protect\citeauthoryear{Brockmeyer, Durinck, Corporaal, and
@@ -79,11 +73,11 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Cadence}{Cadence}{}]%
+\bibitem[\protect\citeauthoryear{Cadence}{Cadence}{2014}]%
         {cadencecompiler}
-{RTL Cadence}.
+{RTL Cadence}. 2014.
 \newblock Compiler User’s Manual.
-\newblock   (????).
+\newblock   (2014).
 \newblock
 
 
@@ -110,13 +104,11 @@
 \bibitem[\protect\citeauthoryear{Cheung, Hsieh, and Balarin}{Cheung
   et~al\mbox{.}}{2009}]%
         {Che09}
-{E. Cheung}, {H. Hsieh}, {and} {F. Balarin}. 2009.
+{Eric Cheung}, {Harry Hsieh}, {and} {Felice Balarin}. 2009.
 \newblock \showarticletitle{Memory subsystem simulation in software TLM/T
   models}. In {\em Design Automation Conference, 2009. ASP-DAC 2009. Asia and
-  South Pacific}. 811 --816.
+  South Pacific}. IEEE, 811--816.
 \newblock
-\showDOI{%
-\url{http://dx.doi.org/10.1109/ASPDAC.2009.4796580}}
 
 
 \bibitem[\protect\citeauthoryear{Filippopoulos, Catthoor, and
@@ -208,13 +200,13 @@
 
 
 \bibitem[\protect\citeauthoryear{Kritikakou, Catthoor, Kelefouras, and
-  Goutis}{Kritikakou et~al\mbox{.}}{2013}]%
+  Goutis}{Kritikakou et~al\mbox{.}}{2014}]%
         {Ang13}
-{A. Kritikakou}, {F. Catthoor}, {V. Kelefouras}, {and} {C. Goutis}. 2013.
-\newblock \showarticletitle{A Scalable and Near-optimal Representation for
-  Storage Size Management}.
-\newblock {\em ACM Trans. Architecture and Code Optimization\/}  {conditionally
-  accepted} (2013).
+{A Kritikakou}, {F Catthoor}, {V Kelefouras}, {and} {C Goutis}. 2014.
+\newblock \showarticletitle{A scalable and near-optimal representation for
+  storage size management}.
+\newblock {\em ACM transaction architecture and code optimization\/} {11}, 1
+  (2014), 1--25.
 \newblock
 
 
@@ -260,14 +252,16 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Ma et~al\mbox{.}}{Ma et~al\mbox{.}}{2007}]%
+\bibitem[\protect\citeauthoryear{Ma, Marchal, Scarpazza, Yang, Wong, G{\'o}mez,
+  Himpe, Ykman-Couvreur, and Catthoor}{Ma et~al\mbox{.}}{2007}]%
         {tcm}
-{Zhe Ma} {and} {others}. 2007.
-\newblock {\em Systematic Methodology for Real-Time Cost-Effective Mapping of
-  Dynamic Concurrent Task-Based Systems on Heterogenous Platforms\/} (1st ed.).
-\newblock Springer Publishing Company, Incorporated.
+{Zhe Ma}, {Pol Marchal}, {Daniele~Paolo Scarpazza}, {Peng Yang}, {Chun Wong},
+  {Jos{\'e}~Ignacio G{\'o}mez}, {Stefaan Himpe}, {Chantal Ykman-Couvreur},
+  {and} {Francky Catthoor}. 2007.
+\newblock {\em Systematic methodology for real-time cost-effective mapping of
+  dynamic concurrent task-based systems on heterogenous platforms}.
+\newblock Springer Science \& Business Media.
 \newblock
-\showISBNx{1402063288, 9781402063282}
 
 
 \bibitem[\protect\citeauthoryear{Macii, Benini, and Poncino}{Macii
@@ -321,16 +315,17 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Panda et~al\mbox{.}}{Panda
-  et~al\mbox{.}}{2001b}]%
+\bibitem[\protect\citeauthoryear{Panda, Catthoor, Dutt, Danckaert, Brockmeyer,
+  Kulkarni, Vandercappelle, and Kjeldsberg}{Panda et~al\mbox{.}}{2001}]%
         {Pgk01}
-{P.~R. Panda} {and} {others}. 2001b.
+{Preeti~Ranjan Panda}, {Francky Catthoor}, {Nikil~D Dutt}, {Koen Danckaert},
+  {Erik Brockmeyer}, {Chidamber Kulkarni}, {A Vandercappelle}, {and}
+  {Per~Gunnar Kjeldsberg}. 2001.
 \newblock \showarticletitle{Data and memory optimization techniques for
   embedded systems}.
-\newblock {\em ACM Trans. Des. Autom. Electron. Syst.\/} {6}, 2 (April 2001),
-  149--206.
+\newblock {\em ACM Transactions on Design Automation of Electronic Systems
+  (TODAES)\/} {6}, 2 (2001), 149--206.
 \newblock
-\showISSN{1084-4309}
 
 
 \bibitem[\protect\citeauthoryear{Panda, Dutt, and Nicolau}{Panda
@@ -344,11 +339,11 @@
 
 
 \bibitem[\protect\citeauthoryear{Panda, Dutt, Nicolau, Catthoor, Vandecappelle,
-  Brockmeyer, Kulkarni, and De~Greef}{Panda et~al\mbox{.}}{2001a}]%
+  Brockmeyer, Kulkarni, and De~Greef}{Panda et~al\mbox{.}}{2001}]%
         {8}
-{P~Ranjan Panda}, {Nikil~D Dutt}, {Alexandru Nicolau}, {Francky Catthoor},
+{Preeti~Ranjan Panda}, {Nikil~D Dutt}, {Alexandru Nicolau}, {Francky Catthoor},
   {Arnout Vandecappelle}, {Erik Brockmeyer}, {Chidamber Kulkarni}, {and} {Eddy
-  De~Greef}. 2001a.
+  De~Greef}. 2001.
 \newblock \showarticletitle{Data memory organization and optimizations in
   application-specific systems}.
 \newblock {\em IEEE Design \& Test of Computers\/} 3 (2001), 56--57.
@@ -358,7 +353,7 @@
 \bibitem[\protect\citeauthoryear{Passes, Sha, and Chao}{Passes
   et~al\mbox{.}}{1995}]%
         {passes1995multi}
-{NL Passes}, {EH-M Sha}, {and} {Liang-Fang Chao}. 1995.
+{NL Passes}, {Edwin Hsing-Mean Sha}, {and} {Liang-Fang Chao}. 1995.
 \newblock \showarticletitle{Multi-dimensional interleaving for time-and-memory
   design optimization}. In {\em Computer Design: VLSI in Computers and
   Processors, 1995. ICCD'95. Proceedings., 1995 IEEE International Conference
@@ -386,16 +381,14 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Simunic, Benini, and De~Micheli}{Simunic
-  et~al\mbox{.}}{1999}]%
+\bibitem[\protect\citeauthoryear{{\v{S}}imuni{\'c}, Benini, and
+  De~Micheli}{{\v{S}}imuni{\'c} et~al\mbox{.}}{1999}]%
         {Ben99}
-{T. Simunic}, {L. Benini}, {and} {G. De~Micheli}. 1999.
+{Tajana {\v{S}}imuni{\'c}}, {Luca Benini}, {and} {Giovanni De~Micheli}. 1999.
 \newblock \showarticletitle{Cycle-accurate simulation of energy consumption in
-  embedded systems}. In {\em Design Automation Conference, 1999. Proceedings.
-  36th}. 867 --872.
+  embedded systems}. In {\em Proceedings of the 36th annual ACM/IEEE Design
+  Automation Conference}. ACM, 867--872.
 \newblock
-\showDOI{%
-\url{http://dx.doi.org/10.1109/DAC.1999.782199}}
 
 
 \end{thebibliography}

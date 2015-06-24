@@ -1,5 +1,5 @@
 %ACM journals format:
-\documentclass[prodmode,acmtodaes]{acmsmall} 
+\documentclass[prodmode,acmtecs]{acmsmall} 
 \usepackage[ruled]{algorithm2e}
 \usepackage{multirow}
 \renewcommand{\algorithmcfname}{ALGORITHM}
@@ -38,7 +38,7 @@ FRANCKY CATTHOOR
 \affil{IMEC \& K.U. Leuven}
 PER GUNNAR KJELDSBERG
 \affil{Norwegian University of Science and Technology}
-PREETI PANDA
+PREETI RANJAN PANDA
 \affil{Indian Institute of Technology Delhi}
 }
 
@@ -62,10 +62,10 @@ The improvement on the energy consumption after efficient interleaving and mappi
 
 \keywords{Data Interleaving, Single Instruction Multiple Data (SIMD) Architectures, Design Space Exploration, Memory Reconfiguration, Data Layout, Energy Optimization}
 
-\acmformat{Iason Filippopoulos, Namita Sharma, Francky Catthoor, Per Gunnar Kjeldsberg, Preeti Panda, 2015. Integrated Optimization Methodology for Data Interleaving and Memory Mapping Exploration on SIMD architectures.}
+\acmformat{Iason Filippopoulos, Namita Sharma, Francky Catthoor, Per Gunnar Kjeldsberg, Preeti Ranjan Panda, 2015. Integrated Optimization Methodology for Data Interleaving and Memory Mapping Exploration on SIMD architectures.}
 
 \begin{bottomstuff}
-Author's addresses: Iason Filippopoulos {and} Per Gunnar Kjeldsberg, Department of Electronics and Telecommunications, Norwegian University of Science and Technology (NTNU), Hogskoleringen 1, 7491 Trondheim, Norway; Namita Sharma  {and} Preeti Panda, Department of Computer Science and Engineering, Indian Institute of Technology Delhi, Hauz Khas, New Delhi - 110016, India; Francky Catthoor, Interuniversity Microelectronics Centre and K. U. Leuven, Kapeldreef 75, B-3001 Leuven, Belgium.
+Author's addresses: Iason Filippopoulos {and} Per Gunnar Kjeldsberg, Department of Electronics and Telecommunications, Norwegian University of Science and Technology (NTNU), Hogskoleringen 1, 7491 Trondheim, Norway; Namita Sharma  {and} Preeti Ranjan Panda, Department of Computer Science and Engineering, Indian Institute of Technology Delhi, Hauz Khas, New Delhi - 110016, India; Francky Catthoor, Interuniversity Microelectronics Centre and K. U. Leuven, Kapeldreef 75, B-3001 Leuven, Belgium.
 \end{bottomstuff}
 
 
@@ -549,7 +549,7 @@ Both he number of memory accesses and the energy per access are reduced.
 \end{figure}
 
 The normalized energy consumption for the motivational example is presented in Fig.\ref{fig:example}.
-The four different approaches are normalized using the conventional case without any optimization.
+The four different approaches are normalized using the monolithic approach without any optimization.
 Energy results for this benchmark are presented for a word length of 4, 8 and 16 elements, which means that every memory access loads/stores 4,8 or 16 elements. 
 The interleaving exploration proposes three different solutions for an SIMD architecture width of 4, 8 and 16 elements respectively.
 The data access patterns of the three interleaving decisions are propagated as a set of constrains to the mapping step.
@@ -576,6 +576,23 @@ The combined approach results in an energy gain of 84\% on the same case.
 
 \subsection{SOR Benchmark}
 
+\begin{algorithm}[t]
+\SetAlgoNoLine
+\ldots \\
+%$N \leftarrow 100$ \newline
+\For{($j = 0; j < N; j+2$)}{
+	\ldots \\
+	resid = \ldots \\
+			+$ c(i)(j) \times u(i)(j-1) $ \\ 
+			+$ d(i)(j) \times u(i)(j) $ \\
+			+$ e(i)(j) \times u(i)(j+1) $ \\
+			+ \ldots \\
+	}	
+ \ldots \\		
+\caption{Code snippet from the SOR benchmark}
+\label{alg:sor}
+\end{algorithm}
+
 \begin{figure}
 \centering
 	\includegraphics[scale = 0.5]{Images/sor.eps} 
@@ -584,14 +601,22 @@ The combined approach results in an energy gain of 84\% on the same case.
 \end{figure}
 
 The normalized energy consumption for the SOR benchmark is presented in Fig.\ref{fig:sor}.
-The four different approaches are normalized using the conventional case without any optimization.
-Energy results for this benchmark are presented for a word length of 3 and 6, which means that every memory access loads/stores 4 or 8 elements, because the architecture supports word lengths in the power of 2.
-This limitation is due to the nature of the application code that adds elements from 3 arrays to 3 constant elements of another array. 
-The interleaving exploration on the application code concludes that it is only possible to make sequential sets of 3 and 6 elements by interleaving the arrays of the application.
-Thus the interleaving exploration alone has a small impact on the reduction of energy consumption for word length of 3 elements.
-The results are even worst for a word length of 6 elements, because the interleaved data have greater size and the conventional mapping of them to the memory is poor.
-The memory size optimization provides more important reduction.
-The integrated approach exploit on a better way the few interleaving options by providing a better mapping of the interleaved data to the memory architecture.
+The four different approaches are normalized using the energy consumption of a system without any optimization as the base.
+Energy results for this benchmark are presented for a word length of 3 and 6, although the architecture supports word lengths in the power of 2.
+This means that every memory access loads or stores 4 or 8 elements, but only up to 3 or 6 array elements are used in the algorithm.
+This limitation is due to the nature of the application code that adds elements from 3 arrays to 3 sequential elements of another array. 
+Alg.~\ref{alg:sor} is a code snippet that demonstrates the considered data structures.
+The arrays \textit{c, d and e} are potential candidates for the interleaving exploration.
+The interleaving exploration on the application code concludes that it is only possible to make sequential sets of 3 and 6 elements by interleaving the arrays \textit{c, d and e}.
+The elements that are multiplied with them are already sequential.
+
+ The interleaving exploration has a small impact on the reduction of energy consumption for word length of 3 elements.
+ This is due to the addition of a redundant element, in order to have a width of four that is supported by the architecture.
+The results are even worst for a word length of 6 elements, because there is a need for two redundant elements to comply with a set width of eight.
+The mapping of the initial data to a clustered memory results in a reduction of around 20\%, which is slightly better than the interleaving optimization.
+The reason is that the mapping of the initial data demands all the memory banks active and the memory is heavily accessed during the execution of the benchmark.
+The integrated approach exploit on a better way the few interleaving options and provides a better mapping of the interleaved data to the memory architecture.
+The final gain for a width of three is 47\%, compared to 17\% and 20\% for the interleaving and the memory optimization respectively.
 
 \subsection{FFT Benchmark}
 
@@ -603,7 +628,7 @@ The integrated approach exploit on a better way the few interleaving options by 
 \end{figure}
 
 The normalized energy consumption for the FFT benchmark is presented in Fig.\ref{fig:fft}.
-The four different approaches are normalized using the conventional case without any optimization.
+The four different approaches are normalized using the monolithic approach without any optimization.
 Energy results for this benchmark are presented for a word length of 4 and 8 elements, which are the two viable options provided by the interleaving exploration.
 Again, the integrated approach results in the lower energy consumption.
 The energy gains for a word length of 8 are significantly high, because blocks of 8 words can be constructed by interleaving of application's arrays.
@@ -618,7 +643,7 @@ The energy gains for a word length of 8 are significantly high, because blocks o
 \end{figure}
 
 The normalized energy consumption for the motion estimation benchmark is presented in Fig.\ref{fig:mest}.
-The four different approaches are normalized using the conventional case without any optimization.
+The four different approaches are normalized using the monolithic approach without any optimization.
 Energy results for this benchmark are presented for a word length of 4, 8 and 16 elements.
 The application code provides good possibilities for interleaving and consequentially the interleaving exploration has a greater impact that the memory size optimization.
 However, the integrated approach optimizes the energy consumption even further.
