@@ -12,6 +12,7 @@ Warning--empty publisher in Ben00b
 Warning--empty address in Ben00b
 Warning--empty address in 6
 Warning--empty year in cadencecompiler
+Warning--empty address in dtse
 Warning--empty publisher in chen1999loop
 Warning--empty address in chen1999loop
 Warning--empty publisher in Che09
@@ -43,45 +44,45 @@ Warning--empty publisher in sharma2013data
 Warning--empty address in sharma2013data
 Warning--empty publisher in Ben99
 Warning--empty address in Ben99
-You've used 33 entries,
+You've used 34 entries,
             5290 wiz_defined-function locations,
-            1426 strings with 21079 characters,
-and the built_in function-call counts, 34736 in all, are:
-= -- 4376
-> -- 1541
+            1430 strings with 21313 characters,
+and the built_in function-call counts, 35640 in all, are:
+= -- 4448
+> -- 1615
 < -- 0
-+ -- 485
-- -- 522
-* -- 2333
-:= -- 3923
-add.period$ -- 170
-call.type$ -- 33
-change.case$ -- 238
-chr.to.int$ -- 31
-cite$ -- 70
-duplicate$ -- 2805
-empty$ -- 1985
-format.name$ -- 633
-if$ -- 8427
++ -- 509
+- -- 546
+* -- 2418
+:= -- 4059
+add.period$ -- 176
+call.type$ -- 34
+change.case$ -- 248
+chr.to.int$ -- 32
+cite$ -- 72
+duplicate$ -- 2863
+empty$ -- 2028
+format.name$ -- 661
+if$ -- 8613
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 123
-newline$ -- 300
-num.names$ -- 262
-pop$ -- 1128
+missing$ -- 125
+newline$ -- 308
+num.names$ -- 270
+pop$ -- 1161
 preamble$ -- 1
-purify$ -- 400
+purify$ -- 415
 quote$ -- 0
-skip$ -- 829
+skip$ -- 845
 stack$ -- 0
-substring$ -- 2498
-swap$ -- 293
+substring$ -- 2537
+swap$ -- 296
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 444
-warning$ -- 37
-while$ -- 244
+type$ -- 452
+warning$ -- 38
+while$ -- 248
 width$ -- 0
-write$ -- 602
-(There were 37 warnings)
+write$ -- 619
+(There were 38 warnings)

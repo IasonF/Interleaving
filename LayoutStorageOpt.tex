@@ -247,7 +247,7 @@ Selection of target platform is an important aspect of the exploration.
 Motivational example shows that the available choices on the memory models have a great impact on the overall energy consumption.
  The key feature needed in the platform architecture is the ability to efficiently support different memory sizes that are suitable for different data structures.
 A generic architecture is presented in Fig.\ref{fig:arch}.
-The scratch-pad memory consists of up to five memory banks. 
+The scratch-pad memory consists of up to four memory banks. 
 For more complex architectures the interconnection cost should be considered and analysed separately for accurate results. 
 Although power gating can be applied to the bus when only a part of a longer bus is needed, an accurate model of the memory wrapper and interconnection must developed, which is beyond the scope of the current work.
 The SIMD vector FU is assumed to perform instructions on multiple data.
@@ -519,25 +519,27 @@ The interleaving exploration provides alternatives for all the  tested word leng
 
 The design exploration is applied to the chosen application benchmarks and energy numbers are derived based on the described target platform.
 The energy numbers are calculated both for the memory and the SIMD architecture presented in Sec.\ref{sec:platform}.
-Four approaches are explored and the corresponding energy consumption of each of them is calculated.
+Four approaches are explored and the corresponding energy consumption for each of them is calculated.
 
 \begin{itemize}
 \item \textit{No optimization.} 
 In this case there is no interleaving exploration and the memory architecture consists of a large memory bank. All the data are mapped on the memory bank without any optimization. 
 \item \textit{Memory Size Optimization.} 
-In this case there is no interleaving exploration and the memory architecture consists of four memory banks.
+In this case there is no interleaving exploration and the memory architecture consists of five memory banks.
 The optimal size for the memory banks and the optimal mapping of the non-interleaved data on them is explored. 
 The number of memory accesses is the same as in the previous approach.
 However, the data is mapped on an efficient clustered memory architecture.
 \item \textit{Interleaving optimization.} 
-In this case there is the  interleaving exploration step is performed and the memory architecture consists of one large memory bank.
+In this case the  interleaving exploration step is performed and the memory architecture consists of one large memory bank.
 The optimal interleaving decision is found and applied to the data, so the locality of useful data is increased.
 However, all the data are mapped on one large memory bank.
 The number of accesses is significantly reduced by the interleaving step, but the energy per access is kept high due to lack of data mapping to an efficient clustered architecture.
 \item \textit{Integrated co-exploration.} 
-In this case the co-exploration of both the interleaving and the data-to-memory mapping optimizations are performed.
+In this case the co-exploration of both the interleaving and the data-to-memory mapping optimizations is performed.
 Both he number of memory accesses and the energy per access are reduced.
 \end{itemize}
+
+\subsection{Motivational Example}
 
 \begin{figure}
 \centering
@@ -549,11 +551,30 @@ Both he number of memory accesses and the energy per access are reduced.
 The normalized energy consumption for the motivational example is presented in Fig.\ref{fig:example}.
 The four different approaches are normalized using the conventional case without any optimization.
 Energy results for this benchmark are presented for a word length of 4, 8 and 16 elements, which means that every memory access loads/stores 4,8 or 16 elements. 
+The interleaving exploration proposes three different solutions for an SIMD architecture width of 4, 8 and 16 elements respectively.
+The data access patterns of the three interleaving decisions are propagated as a set of constrains to the mapping step.
+The mapping step explores all the different data-to-memory mapping options and proposes the most energy efficient memory organization for each of the three interleaved data solutions.
+
 The application code is perfectly suitable for interleaving as discussed in Sec.\ref{sec:motivational}.
 Thus the interleaving exploration has a greater impact that the memory size optimization.
 However, the integrated approach optimizes the energy consumption even further.
 The application is suitable for higher word lengths and there are important gains while moving from 4 to 8 and 16.
-This is explained by the nature of the application that offers good interleaving options for larger words.
+The increase in the architecture width result in significant gains even without any optimization.
+The gains are approximately 50 and 70\% for a width of 8 and 16 compared to a width of 4.
+This is explained by the fact that the accessed array elements are close enough even without data transformations and the existence of holes in the access pattern. 
+By fetching 8 and 16 elements from the memory, the number of useful elements is two and four times more.
+Studying the motivational example in Fig.\ref{fig:example}(a) for a width of 16, each fetching results in 4 lines with one coloured element each.
+
+The interleaving optimization results in greater improvements compared to the memory optimization.
+This is explained by the nature of the application that offers good interleaving options for larger words, i.e. higher values of width.
+The memory optimization is around 20\% lower than the monolithic approach for any width.
+The interleaving optimization results in more than 70\% lower energy for a width of 4 and more than 80\% for a width of 8 and 16.
+The interleaving of the arrays provides perfectly compact sets of data as shown in Fig.\ref{fig:example} and the interleaving cannot improve more for higher values of width.
+The great impact of the combined approach is better illustrated for a width of 16. 
+In this case the two optimizations alone report an energy gain around 20\% and 35\% compared to the non optimized case for width of 16.
+The combined approach results in an energy gain of 84\% on the same case.
+
+\subsection{SOR Benchmark}
 
 \begin{figure}
 \centering
@@ -564,12 +585,15 @@ This is explained by the nature of the application that offers good interleaving
 
 The normalized energy consumption for the SOR benchmark is presented in Fig.\ref{fig:sor}.
 The four different approaches are normalized using the conventional case without any optimization.
-Energy results for this benchmark are presented for a word length of 3 and 6, which means that every memory access loads/stores 4 or 8 elements, because the architecture supports word lengths in the power of 2. 
+Energy results for this benchmark are presented for a word length of 3 and 6, which means that every memory access loads/stores 4 or 8 elements, because the architecture supports word lengths in the power of 2.
+This limitation is due to the nature of the application code that adds elements from 3 arrays to 3 constant elements of another array. 
 The interleaving exploration on the application code concludes that it is only possible to make sequential sets of 3 and 6 elements by interleaving the arrays of the application.
 Thus the interleaving exploration alone has a small impact on the reduction of energy consumption for word length of 3 elements.
 The results are even worst for a word length of 6 elements, because the interleaved data have greater size and the conventional mapping of them to the memory is poor.
 The memory size optimization provides more important reduction.
 The integrated approach exploit on a better way the few interleaving options by providing a better mapping of the interleaved data to the memory architecture.
+
+\subsection{FFT Benchmark}
 
 \begin{figure}
 \centering
@@ -583,6 +607,8 @@ The four different approaches are normalized using the conventional case without
 Energy results for this benchmark are presented for a word length of 4 and 8 elements, which are the two viable options provided by the interleaving exploration.
 Again, the integrated approach results in the lower energy consumption.
 The energy gains for a word length of 8 are significantly high, because blocks of 8 words can be constructed by interleaving of application's arrays.
+
+\subsection{Motion Estimation Benchmark}
 
 \begin{figure}
 \centering
@@ -602,7 +628,16 @@ This is explained by the nature of the application...
 \section{Conclusion}
 \label{sec:conclusion}
 
-Justify why the integrated approach gives better results than just combining the two methods...
+The scope of this work is to presents a methodology for efficient exploration of data interleaving and data-to-memory mapping options for SIMD (Single Instruction Multiple Data) platform architectures.
+Detailed energy models are presented for the studied architecture.
+The methodology focuses on reducing the overall energy consumption by reducing the number of memory accesses and the energy per access.
+The number of memory accesses is reduced by interleaving the application data to construct compact sets of sequential data.
+The energy per memory access is reduced by employing a reconfigurable scratch-pad memory architecture with multiple banks that can operate independently.
+A systematic way is presented in order to explore the different options that lead to the interleaving and data-to-memory mapping decisions.
+A wide range of applications is studied that allow us to draw conclusions about different kinds of dynamic behaviour and their effect on the energy gains achieved using the methodology. 
+The presented methodology is tested using a number of benchmark applications with irregularities on their access scheme.
+The improvement on the energy consumption after efficient interleaving and mapping of data is approximately between 40\% and 80\% for the complete system and the studied benchmarks.
+
 % Bibliography
 \bibliographystyle{ACM-Reference-Format-Journals}
 \bibliography{reference}

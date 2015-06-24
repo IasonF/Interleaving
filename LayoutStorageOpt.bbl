@@ -87,6 +87,17 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Catthoor, Wuytack, de~Greef, Banica,
+  Nachtergaele, and Vandecappelle}{Catthoor et~al\mbox{.}}{1998}]%
+        {dtse}
+{Francky Catthoor}, {Sven Wuytack}, {G.E. de Greef}, {Florin Banica}, {Lode
+  Nachtergaele}, {and} {Arnout Vandecappelle}. 1998.
+\newblock {\em Custom Memory Management Methodology: Exploration of Memory
+  Organisation for Embedded Multimedia System Design}.
+\newblock Springer.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Chen and Sha}{Chen and Sha}{1999}]%
         {chen1999loop}
 {Fei Chen} {and} {Edwin Hsing-Mean Sha}. 1999.
