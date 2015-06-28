@@ -121,6 +121,18 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Garcia, Compton, Schulte, Blem, and Fu}{Garcia
+  et~al\mbox{.}}{2006}]%
+        {Garcia}
+{Philip Garcia}, {Katherine Compton}, {Michael Schulte}, {Emily Blem}, {and}
+  {Wenyin Fu}. 2006.
+\newblock \showarticletitle{An overview of reconfigurable hardware in embedded
+  systems}.
+\newblock {\em EURASIP J. Embedded Syst.\/} {2006}, 1 (Jan. 2006), 13--13.
+\newblock
+\showISSN{1687-3955}
+
+
 \bibitem[\protect\citeauthoryear{Gonzalez and Horowitz}{Gonzalez and
   Horowitz}{1996}]%
         {Gonzalez1996}
@@ -142,6 +154,18 @@
 \newblock \showarticletitle{MIST: An algorithm for memory miss traffic
   management}. In {\em Proceedings of the 2000 IEEE/ACM international
   conference on Computer-aided design}. IEEE Press, 431--438.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Guo, Zhuge, Hu, Yi, Qiu, and Sha}{Guo
+  et~al\mbox{.}}{2013}]%
+        {guo2013data}
+{Yibo Guo}, {Qingfeng Zhuge}, {Jingtong Hu}, {Juan Yi}, {Meikang Qiu}, {and}
+  {Edwin~HM Sha}. 2013.
+\newblock \showarticletitle{Data placement and duplication for embedded
+  multicore systems with scratch pad memory}.
+\newblock {\em Computer-Aided Design of Integrated Circuits and Systems, IEEE
+  Transactions on\/} {32}, 6 (2013), 809--817.
 \newblock
 
 
@@ -273,6 +297,17 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Malik, Moyer, and Cermak}{Malik
+  et~al\mbox{.}}{2000}]%
+        {malik2000low}
+{Afzal Malik}, {Bill Moyer}, {and} {Dan Cermak}. 2000.
+\newblock \showarticletitle{A low power unified cache architecture providing
+  power and performance flexibility}. In {\em Low Power Electronics and Design,
+  2000. ISLPED'00. Proceedings of the 2000 International Symposium on}. IEEE,
+  241--243.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Manjikian and Abdelrahman}{Manjikian and
   Abdelrahman}{1995}]%
         {4}
@@ -302,6 +337,16 @@
   sub-VT domain in 65-nm CMOS technology}.
 \newblock {\em IEEE Transactions on Emerging and Selected Topics in Circuits
   and Systems\/} {1}, 2 (2011).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mittal}{Mittal}{2014}]%
+        {mittal2014survey}
+{Sparsh Mittal}. 2014.
+\newblock \showarticletitle{A survey of architectural techniques for improving
+  cache power efficiency}.
+\newblock {\em Sustainable Computing: Informatics and Systems\/} {4}, 1 (2014),
+  33--43.
 \newblock
 
 
