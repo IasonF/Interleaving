@@ -1,0 +1,4 @@
+Additional ideas for Iason's interleaving paper:
+- What if the memory hierarchy is (partly) predefined? E.g., if the bus width is given, part of your exploration can be to see pros and cons of the different number of interleaved words. E.g., if the bus only allows 8 words, the benefit of 16 words may be eaten up by the two accesses? This may especially be the case if the required memory size is not present among the available memory bank sizes.
+- Does the bus width change with the diferent number of words? If so it may be possible to add a simple cost model for that (if it is not already there).
+- If two loop nests have different optimal interleaving, the cost of rearranging should be included. Depending on the potential for savings in the memory mapping for the two alternatives one could choose to only select one of the to avvoid rearranging.

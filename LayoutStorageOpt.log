@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.24)  26 JUN 2015 19:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.24)  7 JUL 2015 21:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -278,11 +278,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 136.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 140.
+(Font)              <9> on input line 141.
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <9> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 143.
-LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <10> not available
 (Font)              Font shape `OT1/pnc/b/n' tried instead on input line 144.
+LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 145.
 
 [3]
 Package epstopdf Info: Source file: <Images/motivation2.eps>
@@ -293,16 +293,20 @@ Package epstopdf Info: Source file: <Images/motivation2.eps>
 (epstopdf)                    size: 999709 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/motivation2-eps-con
 verted-to.pdf Images/motivation2.eps>
-(epstopdf)             \includegraphics on input line 169.
+(epstopdf)             \includegraphics on input line 170.
 Package epstopdf Info: Output file is already uptodate.
  <Images/motivation2-eps-converted-to.pdf, id=25, 840.13875pt x 1188.44pt>
 File: Images/motivation2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/motivation2-eps-converted-to.pdf>
 Package pdftex.def Info: Images/motivation2-eps-converted-to.pdf used on input 
-line 169.
+line 170.
 (pdftex.def)             Requested size: 356.39758pt x 504.14642pt.
- [4] [5 <./Images/motivation2-eps-converted-to.pdf>] [6]
+
+Underfull \vbox (badness 1248) has occurred while \output is active []
+
+ [4]
+[5 <./Images/motivation2-eps-converted-to.pdf>] [6]
 Package epstopdf Info: Source file: <Images/Architecture.eps>
 (epstopdf)                    date: 2014-01-22 14:04:17
 (epstopdf)                    size: 139726 bytes
@@ -320,8 +324,11 @@ File: Images/Architecture-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Architecture-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Architecture-eps-converted-to.pdf used on input
  line 283.
-(pdftex.def)             Requested size: 257.16273pt x 302.93407pt.
- [7] [8 <./Images/Architecture-eps-converted-to.pdf>]
+(pdftex.def)             Requested size: 214.3001pt x 252.44249pt.
+ [7]
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+ [8 <./Images/Architecture-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/workflow2.eps>
 (epstopdf)                    date: 2015-06-23 16:51:54
 (epstopdf)                    size: 286867 bytes
@@ -349,7 +356,7 @@ Package epstopdf Info: Source file: <Images/AHpattern.eps>
 (epstopdf)                    size: 22922 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/AHpattern-eps-conve
 rted-to.pdf Images/AHpattern.eps>
-(epstopdf)             \includegraphics on input line 426.
+(epstopdf)             \includegraphics on input line 435.
 Package epstopdf Info: Output file is already uptodate.
 
 <Images/AHpattern-eps-converted-to.pdf, id=98, 668.4975pt x 181.67876pt>
@@ -357,10 +364,10 @@ File: Images/AHpattern-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/AHpattern-eps-converted-to.pdf>
 Package pdftex.def Info: Images/AHpattern-eps-converted-to.pdf used on input li
-ne 426.
+ne 435.
 (pdftex.def)             Requested size: 401.1016pt x 109.00809pt.
 
-Overfull \hbox (5.1016pt too wide) in paragraph at lines 426--427
+Overfull \hbox (5.1016pt too wide) in paragraph at lines 435--436
  [][] 
  []
 
@@ -373,7 +380,7 @@ Package epstopdf Info: Source file: <Images/Algebra.eps>
 (epstopdf)                    size: 15601 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Algebra-eps-convert
 ed-to.pdf Images/Algebra.eps>
-(epstopdf)             \includegraphics on input line 462.
+(epstopdf)             \includegraphics on input line 471.
 Package epstopdf Info: Output file is already uptodate.
 
 <Images/Algebra-eps-converted-to.pdf, id=117, 525.965pt x 355.3275pt>
@@ -381,12 +388,13 @@ File: Images/Algebra-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/Algebra-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Algebra-eps-converted-to.pdf used on input line
- 462.
+ 471.
 (pdftex.def)             Requested size: 315.58142pt x 213.19814pt.
- [12 <./Images/Algebra-eps-converted-to.pdf>]
-Underfull \vbox (badness 2189) has occurred while \output is active []
 
- [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+[13 <./Images/Algebra-eps-converted-to.pdf>] [14]
 Package epstopdf Info: Source file: <Images/Example.eps>
 (epstopdf)                    date: 2015-06-17 02:51:45
 (epstopdf)                    size: 10385 bytes
@@ -395,17 +403,20 @@ Package epstopdf Info: Source file: <Images/Example.eps>
 (epstopdf)                    size: 7856 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Example-eps-convert
 ed-to.pdf Images/Example.eps>
-(epstopdf)             \includegraphics on input line 564.
+(epstopdf)             \includegraphics on input line 578.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Example-eps-converted-to.pdf, id=132, 511.9125pt x 434.62375pt>
+<Images/Example-eps-converted-to.pdf, id=135, 511.9125pt x 434.62375pt>
 File: Images/Example-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/Example-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Example-eps-converted-to.pdf used on input line
- 564.
+ 578.
 (pdftex.def)             Requested size: 255.95563pt x 217.31134pt.
- [14]
+
+Underfull \vbox (badness 1852) has occurred while \output is active []
+
+ [15 <./Images/Example-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/sor.eps>
 (epstopdf)                    date: 2015-06-17 02:51:46
 (epstopdf)                    size: 9935 bytes
@@ -414,17 +425,20 @@ Package epstopdf Info: Source file: <Images/sor.eps>
 (epstopdf)                    size: 8122 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/sor-eps-converted-t
 o.pdf Images/sor.eps>
-(epstopdf)             \includegraphics on input line 616.
+(epstopdf)             \includegraphics on input line 630.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/sor-eps-converted-to.pdf, id=136, 511.9125pt x 434.62375pt>
+<Images/sor-eps-converted-to.pdf, id=144, 511.9125pt x 434.62375pt>
 File: Images/sor-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/sor-eps-converted-to.pdf>
-Package pdftex.def Info: Images/sor-eps-converted-to.pdf used on input line 616
+Package pdftex.def Info: Images/sor-eps-converted-to.pdf used on input line 630
 .
 (pdftex.def)             Requested size: 255.95563pt x 217.31134pt.
- [15 <./Images/Example-eps-converted-to.pdf>]
+
+Underfull \vbox (badness 3724) has occurred while \output is active []
+
+ [16 <./Images/sor-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/fft.eps>
 (epstopdf)                    date: 2015-06-17 02:51:47
 (epstopdf)                    size: 9935 bytes
@@ -433,19 +447,16 @@ Package epstopdf Info: Source file: <Images/fft.eps>
 (epstopdf)                    size: 7959 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/fft-eps-converted-t
 o.pdf Images/fft.eps>
-(epstopdf)             \includegraphics on input line 643.
+(epstopdf)             \includegraphics on input line 657.
 Package epstopdf Info: Output file is already uptodate.
- <Images/fft-eps-converted-to.pdf, id=145, 511.9125pt x 434.62375pt>
+
+<Images/fft-eps-converted-to.pdf, id=153, 511.9125pt x 434.62375pt>
 File: Images/fft-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/fft-eps-converted-to.pdf>
-Package pdftex.def Info: Images/fft-eps-converted-to.pdf used on input line 643
+Package pdftex.def Info: Images/fft-eps-converted-to.pdf used on input line 657
 .
 (pdftex.def)             Requested size: 255.95563pt x 217.31134pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16 <./Images/sor-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/mest.eps>
 (epstopdf)                    date: 2015-06-17 02:51:47
 (epstopdf)                    size: 10411 bytes
@@ -454,21 +465,24 @@ Package epstopdf Info: Source file: <Images/mest.eps>
 (epstopdf)                    size: 8015 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mest-eps-converted-
 to.pdf Images/mest.eps>
-(epstopdf)             \includegraphics on input line 658.
+(epstopdf)             \includegraphics on input line 672.
 Package epstopdf Info: Output file is already uptodate.
 
 <Images/mest-eps-converted-to.pdf, id=154, 511.9125pt x 434.62375pt>
 File: Images/mest-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mest-eps-converted-to.pdf>
-Package pdftex.def Info: Images/mest-eps-converted-to.pdf used on input line 65
-8.
+Package pdftex.def Info: Images/mest-eps-converted-to.pdf used on input line 67
+2.
 (pdftex.def)             Requested size: 255.95563pt x 217.31134pt.
  [17 <./Images/fft-eps-converted-to.pdf>] (./LayoutStorageOpt.bbl
+Underfull \vbox (badness 1466) has occurred while \output is active []
+
+ [18 <./Images/mest-eps-converted-to.pdf>]
 Missing character: There is no â in font pncr7t!
 Missing character: There is no € in font pncr7t!
 Missing character: There is no ™ in font pncr7t!
- [18 <./Images/mest-eps-converted-to.pdf>]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19])
@@ -499,7 +513,7 @@ ive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/201
 4/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/local/texlive/2014/texmf-dist/f
 onts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on LayoutStorageOpt.pdf (20 pages, 1353427 bytes).
+Output written on LayoutStorageOpt.pdf (20 pages, 1354461 bytes).
 PDF statistics:
  234 PDF objects out of 1000 (max. 8388607)
  151 compressed objects within 2 object streams
