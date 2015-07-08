@@ -679,8 +679,10 @@ The four different approaches are normalized using the monolithic approach witho
 Energy results for this benchmark are presented for a bus width of 4, 8 and 16 elements.
 The application code provides good possibilities for interleaving and consequently the interleaving exploration has a greater impact than the memory size optimization.
 However, the integrated approach optimizes the energy consumption even further.
-In this case the energy gains for increasing size of bus width are minimal.
-This is explained by the nature of the application.
+In this case the energy gains for increasing size of bus width are minimal when only one optimization is applied.
+This is explained by the nature of the application, which has large parts of redundant data spread out through the memory.
+Thus, the whole memory is active when the mapping is not performed on the compact interleaved data.
+The combined approach offers significant energy gains even for the highest bus width. 
 
 \section{Conclusion}
 \label{sec:conclusion}
