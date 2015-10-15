@@ -111,6 +111,15 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Compilers}{Compilers}{}]%
+        {Virage}
+{DesignWare~Memory Compilers}.
+\newblock {\em 40LP-TSMC Datasheet}.
+\newblock
+\showURL{%
+\url{https://www.synopsys.com/dw/doc.php/ds/es/40LP_Duet_memory_logic_DS.pdf}}
+
+
 \bibitem[\protect\citeauthoryear{Filippopoulos, Catthoor, and
   Kjeldsberg}{Filippopoulos et~al\mbox{.}}{2013}]%
         {filippopoulos2013exploration}
@@ -315,6 +324,18 @@
 \newblock \showarticletitle{Array data layout for the reduction of cache
   conflicts}. In {\em Proceedings of the 8th International Conference on
   Parallel and Distributed Computing Systems}. Citeseer, 1--8.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mei, Vernalde, Verkest, De~Man, and
+  Lauwereins}{Mei et~al\mbox{.}}{2002}]%
+        {xml}
+{Bingfeng Mei}, {Serge Vernalde}, {Diederik Verkest}, {Hugo De~Man}, {and}
+  {Rudy Lauwereins}. 2002.
+\newblock \showarticletitle{DRESC: A retargetable compiler for coarse-grained
+  reconfigurable architectures}. In {\em Field-Programmable Technology,
+  2002.(FPT). Proceedings. 2002 IEEE International Conference on}. IEEE,
+  166--173.
 \newblock
 
 

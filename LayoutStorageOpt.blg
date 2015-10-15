@@ -17,6 +17,8 @@ Warning--empty publisher in chen1999loop
 Warning--empty address in chen1999loop
 Warning--empty publisher in Che09
 Warning--empty address in Che09
+Warning--empty year in Virage
+Warning--empty organization in Virage
 Warning--no number and no volume in filippopoulos2013exploration
 Warning--require articleno with numpages field in Garcia
 Warning--empty publisher in grun2000mist
@@ -34,6 +36,8 @@ Warning--empty publisher in malik2000low
 Warning--empty address in malik2000low
 Warning--empty publisher in 4
 Warning--empty address in 4
+Warning--empty publisher in xml
+Warning--empty address in xml
 Warning--empty publisher in Mei10
 Warning--empty address in Mei10
 Warning--page numbers missing in both pages and numpages fields in Mei11
@@ -45,45 +49,45 @@ Warning--empty publisher in sharma2013data
 Warning--empty address in sharma2013data
 Warning--empty publisher in Ben99
 Warning--empty address in Ben99
-You've used 38 entries,
+You've used 40 entries,
             5290 wiz_defined-function locations,
-            1442 strings with 22296 characters,
-and the built_in function-call counts, 41120 in all, are:
-= -- 5160
-> -- 1957
+            1452 strings with 22700 characters,
+and the built_in function-call counts, 43788 in all, are:
+= -- 5463
+> -- 2040
 < -- 0
-+ -- 623
-- -- 648
-* -- 2890
-:= -- 4701
-add.period$ -- 196
-call.type$ -- 38
-change.case$ -- 296
-chr.to.int$ -- 37
-cite$ -- 77
-duplicate$ -- 3226
-empty$ -- 2289
-format.name$ -- 787
-if$ -- 9945
++ -- 647
+- -- 747
+* -- 3082
+:= -- 4991
+add.period$ -- 205
+call.type$ -- 40
+change.case$ -- 310
+chr.to.int$ -- 39
+cite$ -- 83
+duplicate$ -- 3379
+empty$ -- 2397
+format.name$ -- 819
+if$ -- 10473
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 142
-newline$ -- 329
-num.names$ -- 303
-pop$ -- 1305
+missing$ -- 147
+newline$ -- 345
+num.names$ -- 319
+pop$ -- 1384
 preamble$ -- 1
-purify$ -- 485
+purify$ -- 509
 quote$ -- 0
-skip$ -- 941
+skip$ -- 980
 stack$ -- 0
-substring$ -- 2901
-swap$ -- 336
-text.length$ -- 0
+substring$ -- 3307
+swap$ -- 351
+text.length$ -- 143
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 508
-warning$ -- 39
-while$ -- 276
+type$ -- 536
+warning$ -- 43
+while$ -- 292
 width$ -- 0
-write$ -- 682
-(There were 39 warnings)
+write$ -- 714
+(There were 43 warnings)

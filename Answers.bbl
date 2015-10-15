@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{Virage}
+DesignWare~Memory Compilers.
+\newblock {\em 40LP-TSMC Datasheet}.
+
+\bibitem{filippopoulos2013exploration}
+Iason Filippopoulos, Francky Catthoor, and Per~Gunnar Kjeldsberg.
+\newblock Exploration of energy efficient memory organisations for dynamic
+  multimedia applications using system scenarios.
+\newblock {\em Design Automation for Embedded Systems}, pages 1--24, 2013.
+
+\bibitem{xml}
+Bingfeng Mei, Serge Vernalde, Diederik Verkest, Hugo De~Man, and Rudy
+  Lauwereins.
+\newblock Dresc: A retargetable compiler for coarse-grained reconfigurable
+  architectures.
+\newblock In {\em Field-Programmable Technology, 2002.(FPT). Proceedings. 2002
+  IEEE International Conference on}, pages 166--173. IEEE, 2002.
+
+\bibitem{sharma2013data}
+Namita Sharma, TV~Aa, Prashant Agrawal, Praveen Raghavan, Preeti~Ranjan Panda,
+  and Francky Catthoor.
+\newblock Data memory optimization in lte downlink.
+\newblock In {\em Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE
+  International Conference on}, pages 2610--2614. IEEE, 2013.
+
+\end{thebibliography}

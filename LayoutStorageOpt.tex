@@ -9,12 +9,6 @@
 \SetAlCapHSkip{0pt}
 \IncMargin{-\parindent}
 
-%Springer DAES format below:
-%\documentclass[runningheads,a4paper]{llncs}
-%\usepackage{amssymb}
-%\setcounter{tocdepth}{3}
-%\usepackage{graphicx}
-
 % Metadata Information
 %\acmVolume{9}
 %\acmNumber{4}
@@ -47,7 +41,7 @@ This work presents a methodology for efficient exploration of data interleaving 
 The system architecture consists of  a reconfigurable clustered scratch-pad memory and a SIMD functional unit, which performs the same operation on multiple input data in parallel. 
 The memory accesses contribute substantially to the overall energy consumption of an embedded system executing a data intensive task. 
 The scope of this work is the reduction of the overall energy consumption by increasing the utilization of the functional units and decreasing the number of memory accesses.
-The presented methodology is tested using a number of benchmark applications with irregularities in their access scheme.
+The presented methodology is tested using a number of benchmark applications with holes in their access scheme.
 Potential gains are calculated based on the energy models both for the processing and the memory part of the system.
 The reduction in energy consumption after efficient interleaving and mapping of data is between 40\% and 80\% for the complete system and the studied benchmarks.
 \end{abstract}
@@ -79,7 +73,7 @@ New novel hardware solutions have been proposed to reduce the energy consumption
 On the processing side, SIMD architectures offer new possibilities for potential improvements on the performance and the energy consumption.
 On the memory side, modern memory architectures provide different energy modes and clustered scratch-pad memory banks that can operate independently, offering more options for reducing energy consumption.
 Dynamic and data intensive algorithms are implemented on embedded systems.
-Data intensive applications have often irregular memory accesses, meaning that the data in memory are not always accessed in order.
+Data intensive applications have often holes in their memory accesses, meaning that the data in memory are not always accessed in order.
 The lack of spatial locality and the presence of redundant data results in lower utilization of the hardware resources, given that a conventional approach is employed for the handling of data.
 This problem motivates the development of a methodology to improve the management of the data.
 
@@ -108,8 +102,9 @@ This article is organized as follows.
 Section~\ref{sec:motivational} motivates the study of developing a methodology for optimization of the data interleaving exploration and the data-to-memory mapping. 
 Section~\ref{sec:related} surveys related work on both the interleaving and memory mapping exploration.
 Section~\ref{sec:methodology} presents the general work-flow and the sequence of the methodology steps.
-In Section~\ref{sec:platform} the target platform is described accompanied by a detailed description of the employed SIMD architecture and the memory models, while the set of benchmarks and their characteristics are analyzed in Section~\ref{sec:applications}. 
-Results of applying the described exploration methodology to the targeted applications are shown in Section~\ref{sec:results}, while conclusions are drawn in Section~\ref{sec:conclusion}. 
+In Section~\ref{sec:platform} the target platform is described accompanied by a detailed description of the employed SIMD architecture and the memory models.
+The set of benchmarks is analyzed in Section~\ref{sec:applications} and  
+results of applying the described exploration methodology to the targeted applications is also presented there. Finally, conclusions are drawn in Section~\ref{sec:conclusion}. 
 
 \section{Motivational Example}
 \label{sec:motivational}
@@ -125,11 +120,11 @@ The current work is complementary to the existing ones and focuses on the areas 
 The approach presented in this paper differentiates by exploring both the data transformations and data-to-memory assignment aspects in the presence of a platform with dynamically configurable memory blocks and bus widths. 
 Moreover, many methods for source code transformations, and especially loop transformations, have been proposed in the memory management context. 
 These methods are fully complementary to our focus on data-to-memory assignment and should be performed prior to our step.
-The contribution of the proposed work is the presentation of a combined approach that investigates the interleaving and memory mapping options for a reconfigurable SIMD architecture.  
+The contribution of the proposed work is the development of a combined approach that investigates the interleaving and memory mapping options for a reconfigurable SIMD architecture.  
 
 To illustrate the sub-optimal utilization of SIMD architectures using conventional allocation and assignment of data, the simple example of Alg.~\ref{alg:motivation} is used.
 In this example, we assume that the desired result is always the sum of 4 elements from arrays \textit{A, B, C and D}. 
-The access pattern shows an irregularity, as a result of the iteration index.
+The access pattern has holes, as a result of the iteration index.
 For every group of four sequential array elements, there is only one used for the calculation of the result and the other three are skipped.
 An intuitive interleaving optimization is the interleaving of the arrays \textit{A, B, C and D}, in order to generate sequences of elements that are all useful on the calculation of the \textit{result} variable. 
 A full interleaving exploration could reveal several options to produce larger sequences of array elements that are needed during the execution of Alg.~\ref{alg:motivation}.
@@ -150,16 +145,16 @@ The initial data representation for the arrays \textit{A, B, C and D} is shown i
 The array elements that are accessed during the execution of the motivational example are marked with colors, in contrast to the elements that are not accessed.
 The array elements are drawn in 25 lines with 4 elements on each line only for a better visual representation.
 At this point there is no mapping to the memory architecture and no constraint regarding the number of lines or their width in the memory design.
-The interleaving of the arrays \textit{A, B, C and D} is shown in Fig.\ref{fig:motivation}(c). 
+The interleaving of the arrays \textit{A, B, C and D} is shown in Fig.\ref{fig:motivation}(b). 
 Each line of the new interleaved array contains one elements from the initials arrays.
 For example, the first line consists of the elements \textit{A(0), B(0), C(0) and D(0)}. 
 The result of the interleaving is the construction of blocks consisting of 4 colored elements followed by blocks with 12 redundant elements.
 
 Let us now consider possible data-to-memory mappings for the initial and interleaved array elements.
-We assume here that he memory architecture either consists of one single memory large enough to fit all four arrays or of four memory banks with a combined memory size large enough to fit the four arrays.
+We assume here that the memory architecture either consists of one single memory large enough to fit all four arrays or of four memory banks with a combined memory size large enough to fit the four arrays.
 The conventional approach with the initial set of data maps each array after each other in the single memory or maps each array in a separate bank.
-A possible data-to-memory mapping for the initial set of data using four banks is presented in Fig.~\ref{fig:motivation}(b). 
-The data-to-memory mapping for the constructed interleaved array is presented in Fig.~\ref{fig:motivation}(d).
+A possible data-to-memory mapping for the initial set of data using four banks is presented in Fig.~\ref{fig:motivation}(c). 
+The optimized data-to-memory mapping for the constructed interleaved array is presented in Fig.~\ref{fig:motivation}(d).
 The array is split into four parts and stored in the four different banks using the same memory architecture.
 Each of the lines of the interleaved array is stored in the bank corresponding to modulo 4 of the array line.
 For example, line $x$ is stored in bank $x \bmod 4$.
@@ -190,6 +185,13 @@ The overall number of memory accesses is:
 	\end{equation}	 	
 
 A quick estimation for the difference in the energy consumption between the approaches presented in Fig.~\ref{fig:motivation} can be calculated using a simple energy model for the memory banks.
+The model is based on simple, yet realistic, estimations for the dynamic and static energy on the memory banks.
+The scope is to illustrate the motivation for this work, without extensively describing the detailed memory model characteristics. 
+The target architecture and the energy models are described in depth in Sec. 4. 
+For the simple model in this chapter, we assume that the static energy is 30\% of the dynamic energy, which is a rational approximation for small memory banks with sizes between 1KB and 16KB.
+The static energy increases linearly with the memory size, which is a good approximation based on the detailed models.
+Similarly the approximation for the correlation between the dynamic energy and the memory size is an approximation, which is simple but sufficiently accurate for the motivational example.
+
 We assume that the energy cost of accessing a memory bank the size of one array is 1E, while the average leakage energy in the time needed for the execution of one loop iteration is 0.3E. 
 The corresponding access and leakage numbers for a four times larger memory that can fit all the data together is  3E and 1.2E, respectively. 
 The numbers reflects the fact that as a first order approximation access energy increases sub-linearly with increased memory size, while leakage increases linearly with memory size. 
@@ -210,12 +212,12 @@ Finally, the energy consumption for a four bank memory architecture with interle
 	\begin{equation}
 		\textit{25 $\times$ 1E + 1$\times$ 25$\times$ 0.3E = 32.5E}.
 	\end{equation}			
-It should be noted that the leakage energy in the last case is considered only for the one bank that is always accesses.
+It should be noted that the leakage energy in the last case is considered only for the one bank that is always accessed.
 The memory banks that store redundant data are assumed switched to retention mode to minimize leakage.
 The simple estimations presented in equations (1)-(6) shows that a pure interleaving optimization results in a 75\% reduction in the number of accesses.
 A memory optimization based on an energy efficient four bank clustered memory architecture can also give an important energy reduction.
 The energy gains are even greater when interleaved data are mapped to an efficient memory architecture.
-The observations for this simple example motivates the further exploration of the data interleaving and the data-to-memory mapping for applications with irregularities in their accesses. 
+The observations for this simple example motivates the further exploration of the data interleaving and the data-to-memory mapping for applications with holes in their accesses. 
 %The performance is also higher as there are 75\% less memory accesses.
 %The energy consumption due to memory leakage is also lower, as the access time for the memory and the execution time of the algorithm are shorter.
 
@@ -259,6 +261,15 @@ The variations in memory needs during the lifetime of an application are studied
 Different system scenarios capture the application's different resource requirements that change dynamically at run-time.
 Many possible memory platform configurations and data-to-memory assignments are studied as system scenario parameters, which lead to a large exploration space.
 
+The current work is more than a simple application of the two approaches, one after the other.
+Such an approach cannot always guarantee the optimal results.
+The reason is that for each different interleaving solutions, there is a different corresponding optimal memory mapping solution.
+However, an interleaving solution that results in less access holes than another, can lead to a less optimal memory mapping.
+In general, the optimal interleaving solution does not always lead to the optimal data-to-memory mapping solution.
+The reason is that the interleaving solution adds a number of constraints on the mapping of the interleaving data into the memory. 
+Different interleaving solutions introduce different constraints. 
+Therefore, there is a need to develop an integrated methodology for the achieving the improvements of both approaches.
+
 \section{Target Architecture and Energy Models}
 \label{sec:platform}
 
@@ -268,8 +279,15 @@ The motivational example in the previous section shows that the available choice
 A generic architecture is presented in Fig.\ref{fig:arch}.
 The scratch-pad memory consists of up to four memory banks. 
 For more complex architectures the interconnection cost should be considered and analyzed separately for accurate results. 
-Although power gating can be applied to the bus when only a part of a longer bus is needed, an accurate model of the memory wrapper and interconnection must developed, which is beyond the scope of the current work.
+Although power gating can be applied to the bus when only a part of a longer bus is needed, an accurate model of the memory wrapper and interconnection must be developed, which is beyond the scope of the current work.
 The SIMD vector FU is assumed to perform instructions on multiple data.
+
+The proposed architecture uses scratch-pad memories and no cache memory is included in the current study.
+The main reason is that the data can be allocated on the scratchpad memory during compilation by the designer.
+Software controlled allocation is a significant feature for the current methodology, as the allocation of data can be fully determined by the designer during design-time.
+On the other hand, the hardware control automatically copies the data into the cache and resolves any hits or misses.
+The basic principles of the methodology are still applicable, but some modifications are probably needed to deal with cache memories.
+Temporal locality and data reuse are taken into consideration during the interleaving exploration.
 
 The methodology explores different interleaving and data to memory mapping options for the reconfigurable architecture.
 The optimal sizes are found based on the sizes of the data after the interleaving exploration.
@@ -289,6 +307,7 @@ Thus, the accuracy of the models influence the decisions taken during the design
 
 The dynamic memory organization is constructed using commercially available SRAM memory models (MM).
 For those models delay and energy numbers are derived from a commercial memory compiler.
+The commercial memory compiler is part of DesignWare Memory Compilers provided by Synopsys. The logic libraries supporting a wide range of foundries and process technologies from 250nm to 28nm. The memories are optimized for low power, high performance and high density. The 40nm library was chosen for the current work. The datasheet can be found in \cite{Virage}.
 In addition, experimental standard cell-based memories (SCMEM) \cite{Mei11}  are  considered for smaller memories due to their energy and area efficiency for reasonably small storage capacities, as argued in \cite{Mei10}. 
 The standard cell-based memories are synthesized using Cadence RTL compiler for TSMC 40nm standard library. 
 Afterwards, power simulations on the synthesized design are carried out using Synopsys PrimeTime, in order to obtain energy numbers.
@@ -304,7 +323,7 @@ Switching to active mode can be performed with a negligible energy penalty and a
 Data is retained.  
 \item Deep sleep mode: The supply voltage is set to the lowest possible value that can be used without loss of data. 
 This voltage threshold is expected to be lower for SCMEMs than MM models and can be as low as 0.3V. 
-The number of clock cycles needed for switching to active mode is higher compared to sleep mode, typically in the range of 20 to 50 clock cycles depending on the clock speed. 
+The number of clock cycles needed for switching to active mode is higher compared to light sleep mode, typically in the range of 20 to 50 clock cycles depending on the clock speed. 
 Consequently, the speed of the PE and the real-time constraints of the applications have to be taken into consideration when choosing light or deep sleep mode at a specific time.  
 \item Shut down mode: Power-gating techniques are used to achieve near zero leakage power. 
 Stored data is lost. 
@@ -347,13 +366,17 @@ It is clearly shown that the choice of memory units has an important impact on t
 \subsection{Functional Unit Models}
 
 The processing of the interleaved data is performed in the part of the architecture consisting of the SIMD FU and the central vector register file, as shown in Fig.\ref{fig:arch}.
-For efficient utilization of the vector FU, the register file has a wide interface (256 bit wide) with the scratchpad memory and allows testing for word length of 4, 8 and 16 elements, assuming that each array element is 16 bit wide.  
+ The bus between the memory part and the processing part is  256 bit wide.
+ The wide bus allows testing for word length of 4, 8 and 16 elements, assuming that each array element is 16 bit wide.
+ The different word lengths provide different design options for the vector FU.
 This processor belongs to the class of coarse-grain reconfigurable array (CGRA) processors and is described in more detail in \cite{lee2003compilation}.
 The HDL model of the processor is synthesized using Cadence RTL compiler \cite{cadencecompiler} and the energy numbers are extracted using Synopsys Primepower \cite{kai2003synopsys}.
 
 For efficient utilization of the vector FU, the register file has a wide interface with the clustered scratch-pad memory. 
 Since the target architecture is a configurable processor that can be customized in various ways, the standard evaluation and execution mechanism is to run the programs on a processor simulator. 
-An XML based language is used to describe the architecture, and a cycle-accurate simulator of the processor is used to simulate the generated code on the architecture. 
+An XML based language is used to describe the architecture, and a cycle-accurate simulator of the processor is used to simulate the generated code on the architecture.
+An XML based language is used to describe the architecture, and a cycle-accurate simulator of the processor is used to simulate the generated code on the architecture. The XML provides a structural way of describing the architecture presented in Fig. 2 including the different components, the parameters of each component and the relationship between them. The XML description generates a graphical representation of the architecture and is the input for the simulator presented in \cite{xml}. The chosen simulator is developed for coarse-grained reconfigurable architectures and is suitable in our case, because of the dynamic parameters of our architecture.
+ 
 The energy consumption information for different types of instructions and different widths is available for the FU models.
 The width of the FU corresponds to the number of pairs of array elements on which the specific instruction is performed.
 Relative values for a subset of them is presented in Table \ref{tab:models2}. 
@@ -401,7 +424,7 @@ The exploration space consists of the potential combinations between the differe
 The overall work-flow is presented in Fig.\ref{fig:workflow}. 
 The first step of the methodology is the analysis of the application code. 
 The methodology is applicable to any application.
-However the applications that can benefit more from the proposed methodology are the ones with irregular access patterns.
+However the applications that can benefit more from the proposed methodology are the ones with holes in their access patterns.
 The second step is the extraction of the access pattern for each data structure present on the application code.
 The third step is the interleaving exploration, which explores all the different options for the re-arrangement of the data.
 The aim of this step is the construction of compact sets of data by using defined operations between the available access patterns.
@@ -455,7 +478,7 @@ The access patterns of arrays $A$ and $B$ are combined in a new access pattern, 
 The use of access patterns and the theory for calculating the access patterns of different combinations enables an extensive exploration of the possible data interleaving options.
 
 The impact of the data interleaving exploration on the number of memory accesses is significant.
-When the accesses are irregular and the data are organized in index order, each memory access results in a small amount of useful data due to the presence of holes.
+When there are holes in the access pattern and the data are organized in index order, each memory access results in a small amount of useful data due to the presence of holes.
 In contrast the re-organization of the data provides a sequence of useful data without many holes between them.
 Thus, a single access to the memory results in a higher number of useful elements.
 The overall number of memory accesses is reduced, as each access has a higher utilization.
@@ -479,6 +502,14 @@ Thus, the overall number of memory access in the second case is reduced by half 
 Given the input from the previous step, we explore the mapping of the interleaved data to the memory architecture.
 A clustered memory organisation with up to five memory banks of varying sizes is explored. 
 The limitation in the number of memory banks is necessary in order to keep the interconnection cost between the processing element (PE) and the memories constant through exploration of different architectures. 
+There are two main reason for exploring architectures up to five memory banks.
+Firstly, the energy gains achieved by increasing the number of memory banks in the memory architecture are nearly saturated even for five banks.
+In \cite{filippopoulos2013exploration} a group of different applications were studied with regard to their energy consumption on a clustered memory architecture consisting of up to five memory banks.
+The results shows that depending on the application, the energy gains started to saturate after adding a third or a fourth bank and become far smaller when adding a fifth bank.
+Thus, for most applications a memory architecture with five memory banks already provides more than necessary reconfiguration options.  
+Secondly, the overhead increases exponentially with the number of memory banks, due to the increased complexity of the memory architecture. 
+Therefore, a memory architecture with six banks is not a potentially efficiency options due to the high overhead and the very low energy gain.
+
 The decision to use memory banks with varying sizes on the clustered memory organization increases the reconfiguration options and consequently the potential energy gains. 
 In general, smaller memories are more energy efficient compared to larger memories banks. 
 However, in some cases large memory banks are needed in order to fit the application data without the need for too many small memories causing complex interconnects. 
@@ -505,28 +536,35 @@ Thus, the interleaving decisions are propagated as constraints on the mapping ex
 The constrains consist of the arrays that are interleaved, the new access pattern and the width of SIMD architecture for which the specific interleaving solution is optimal.
 The mapping step is performed based on these constrains.
 
-\section{Applications}
+\section{Applications and Experimental Evaluation}
 \label{sec:applications}
 
-The applications that benefit most from the proposed methodology are characterized by having irregular access patterns with holes.
-Applications with irregular accesses can be found on several application domains.
+\subsection{Benchmark Applications}
+
+Interleaving is a suitable layout optimization for the target set of benchmark applications.
+The applications that benefit most from the proposed methodology are characterized by having access patterns with holes.
+Interleaving is a widely used technique that fits the goal of generating more compact sets of data.
+Thus, it is the chosen data layout optimization.
+Other optimization techniques can be complementary to the interleaving step of the methodology, if they are applied prior to the interleaving step.
+Otherwise, the methodology needs to be modified in order to be compatible with more complex optimizations.
+Applications with holes in their access pattern can be found on several application domains.
 The current study includes representative candidates from three different domains, namely the multimedia, the wireless and the equation solver domains.
 Suitable applications can also be found on other areas.
 An overview of the tested benchmark applications is presented below:
 
 \begin{enumerate}
 \item Motivational example is the very simple example presented in Sec.~\ref{sec:motivational}. 
-It uses four arrays that all have the same irregular access pattern, namely 1A-3H.
+It uses four arrays that all have holes in their access pattern, namely 1A-3H.
 One element from each array is used to calculate an intermediate result on every loop iteration.
 The interleaving is easy because the four arrays have the same pattern.
 Further interleaving within the array can result in even longer sequences of useful elements.
 The access pattern is repeated for every four elements (1A-3H), so the scaling for the different word lengths (4, 8 and 16) is expected to be good. 
 \item Successive Over Relaxation (SOR) is a method for evaluating partial differential equations or solving a linear system of equations.
-The SOR benchmark has a more irregular access pattern.
+The SOR benchmark has an access pattern with more holes and different distribution of them.
 The interleaving exploration provides sequences of three or six sequential useful elements.
 Thus, the utilization on the SIMD architecture is expected to be lower.
-This application is an representative example from the equation solver domain.
-\item FFT benchmark has an irregular pattern during the access of the pilot matrices. 
+This application is a representative example from the equation solver domain.
+\item FFT benchmark has holes in the access pattern during the access of the pilot matrices. 
 The interleaving exploration for FFT is presented in \cite{sharma2013data}.
 The number of matrices is higher and more interleaving options are present.
 However, the interleaving cannot provide an acceptable solution for 16 sequential useful elements.
@@ -537,7 +575,7 @@ The interleaving exploration provides alternatives for all the  tested word leng
 This application is an representative example from the multimedia domain.
 \end{enumerate}
 
-\section{Results}
+\subsection{Results}
 \label{sec:results}
 
 %\begin{table}%
@@ -571,7 +609,7 @@ In this case the co-exploration of both the interleaving and the data-to-memory 
 Both he number of memory accesses and the energy per access are reduced.
 \end{itemize}
 
-\subsection{Motivational Example}
+\subsubsection{Motivational Example}
 
 \begin{figure}
 \centering
@@ -606,7 +644,7 @@ The great impact of the combined approach is better illustrated for a width of 1
 In this case the two optimizations alone report an energy gain around 20\% and 35\% compared to the non optimized case for width of 16.
 The combined approach results in an energy gain of 84\% on the same case.
 
-\subsection{SOR Benchmark}
+\subsubsection{SOR Benchmark}
 
 \begin{algorithm}[t]
 \SetAlgoNoLine
@@ -650,7 +688,7 @@ The reason is that the mapping of the initial data demands all the memory banks 
 The integrated approach exploit on a better way the few interleaving options and provides a better mapping of the interleaved data to the memory architecture.
 The final gain for a width of three is 47\%, compared to 17\% and 20\% for the interleaving and the memory optimization respectively.
 
-\subsection{FFT Benchmark}
+\subsubsection{FFT Benchmark}
 
 \begin{figure}
 \centering
@@ -665,7 +703,7 @@ Energy results for this benchmark are presented for a bus width of 4 and 8 eleme
 Again, the integrated approach results in the lower energy consumption.
 The energy gains for a bus width of 8 are significant, because blocks of 8 elements can be constructed by interleaving of application's arrays.
 
-\subsection{Motion Estimation Benchmark}
+\subsubsection{Motion Estimation Benchmark}
 
 \begin{figure}
 \centering
@@ -694,7 +732,7 @@ The number of memory accesses is reduced by interleaving the application data to
 The energy per memory access is reduced by employing a reconfigurable scratch-pad memory architecture with multiple banks that can operate independently.
 A systematic way is presented in order to explore the different options that lead to the interleaving and data-to-memory mapping decisions.
 A wide range of applications is studied that allow us to draw conclusions about different kinds of dynamic behavior and their effect on the energy gains achieved using the methodology. 
-The improvement in the total system energy consumption after efficient interleaving and mapping of data is between 40\% and 80\% for the studied benchmarks having the type of irregularities in their access scheme that benefit most from the methodology.
+The improvement in the total system energy consumption after efficient interleaving and mapping of data is between 40\% and 80\% for the studied benchmarks having the type of holes in their access scheme that benefit most from the methodology.
 
 % Bibliography
 \bibliographystyle{ACM-Reference-Format-Journals}

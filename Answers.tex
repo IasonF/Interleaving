@@ -1,0 +1,172 @@
+\documentclass[12pt,a4paper,notitlepage]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\author{Iason}
+\begin{document}
+
+\section*{Summary of changes}
+
+First, we would like to say thank you to the reviewers for the useful comments to improve the paper. We have addressed all the comments as explained below.
+
+\subsection*{Referee 1}
+
+\begin{itemize}
+
+\item \textit{The term "irregular" in the paper used to describe the access patterns is not accurate and needs to be better defined. Even though there are access holes in the given example, the access patterns can still be well defined using simple mathematical formula.}
+
+The term irregular has been replaced with more descriptive terms, i.e. application with holes in their access pattern.
+
+\item \textit{In the experimental evaluation, have you also compared the proposed methodology with the state-of-art energy optimization techniques for embedded systems? If so, what is improvement of your approach over theirs?}
+
+It is difficult to reproduce the results from other groups only by reading their published work. The set of benchmarks is also different. Thus, related work is presented but not directly compared with the current approach. This work compares the current approach with the previous published work from our groups.
+
+\item \textit{Interleaving is only one type of data layout optimization. Have you also tried other more complex optimizations? What is the main reason that you think interleaving is the most suitable/efficient one?}
+
+Interleaving is a suitable layout optimization for the target set of benchmark applications.
+The applications that benefit most from the proposed methodology are characterized by having access patterns with holes.
+Interleaving is a widely used technique that fits the goal of generating more compact sets of data.
+Thus, it is the chosen data layout optimization.
+Other optimization techniques can be complementary to the interleaving step of the methodology, if they are applied prior to the interleaving step.
+Otherwise, the methodology needs to be modified in order to be compatible with more complex optimizations.
+
+\textbf{This has been clarified on Section 6.1}
+
+\item \textit{Do you think improving temporal locality of data accesses in cache is also important, if the cache is available? In embedded systems, there should also be a wide range of applications in which the same data need to be accessed multiple times? Thus if temporal locality is exploited, both stalls and number of accesses to main memory can be reduced.}
+
+The proposed architecture uses scratch-pad memories and no cache memory is included in the current study.
+The main reason is that the data can be allocated on the scratchpad memory during compilation by the designer.
+Software controlled allocation is a significant feature for the current methodology, as the allocation of data can be fully determined by the designer during design-time.
+On the other hand, the hardware control automatically copies the data into the cache and resolves any hits or misses.
+The basic principles of the methodology are still applicable, but some modifications are probably needed to deal with cache memories.
+Temporal locality and data reuse are taken into consideration during the interleaving exploration.
+
+\textbf{This has been clarified on Section 4}
+
+\item \textit{Can you add references to the following: 1) simple energy model for evaluating the energy consumption for the motivation example; 2) the commercial memory compiler for SRAM memory models; 3) the XML based language used to describe the architecture.}
+\\
+\\
+\begin{enumerate}
+\item A quick estimation for the difference in the energy consumption between the approaches presented in Fig. 1 can be calculated using a simple energy model for the memory banks. 
+The model is based on simple, yet realistic, estimations for the dynamic and static energy on the memory banks.
+The scope is to illustrate the motivation for this work, without extensively describing the detailed memory model characteristics. 
+The target architecture and the energy models are described in depth in Sec. 4. 
+For the simple model in this chapter, we assume that the static energy is 30\% of the dynamic energy, which is a rational approximation for small memory banks with sizes between 1KB and 16KB.
+The static energy increases linearly with the memory size, which is a good approximation based on the detailed models.
+Similarly the approximation for the correlation between the dynamic energy and the memory size is an approximation, which is simple but sufficiently accurate for the motivational example.
+
+\textbf{This has been clarified on Section 2}
+
+\item The commercial memory compiler is part of DesignWare Memory Compilers provided by Synopsys. The logic libraries supporting a wide range of foundries and process technologies from 250nm to 28nm. The memories are optimized for low power, high performance and high density. The 40nm library was chosen for the current work. The datasheet can be found in \cite{Virage}.
+
+\textbf{This has been clarified on Section 4.1}
+
+\item An XML based language is used to describe the architecture, and a cycle-accurate simulator of the processor is used to simulate the generated code on the architecture. The XML provides a structural way of describing the architecture presented in Fig. 2 including the different components, the parameters of each component and the relationship between them. The XML description generates a graphical representation of the architecture and is the input for the simulator presented in \cite{xml}. The chosen simulator is developed for coarse-grained reconfigurable architectures and is suitable in our case, because of the dynamic parameters of our architecture.
+
+\textbf{This has been clarified on Section 4.2}
+
+\end{enumerate}
+
+\item \textit{At the end of page 3, there is such description "The interleaving of the arrays A, B, C and D is shown in Fig.1(c)"? Do you actually mean Fig.1(b)?}
+\\
+\\
+Yes. The error has been fixed.
+
+\item \textit{In Page 9, please rephrase the redundant description, "For efficient utilization of the vector FU, the register file ..."}
+\\
+\\
+The appropriate changes have been made.
+
+\item \textit{In the experimental part, can you comment on why you choose 5 banks? And what will be effect with different number of banks?}
+\\
+\\
+There are two main reason for exploring architectures up to five memory banks.
+Firstly, the energy gains achieved by increasing the number of memory banks in the memory architecture are nearly saturated even for five banks.
+In \cite{filippopoulos2013exploration} a group of different applications were studied with regard to their energy consumption on a clustered memory architecture consisting of up to five memory banks.
+The results shows that depending on the application, the energy gains started to saturate after adding a third or a fourth bank and become far smaller when adding a fifth bank.
+Thus, for most applications a memory architecture with five memory banks already provides more than necessary reconfiguration options.  
+Secondly, the overhead increases exponentially with the number of memory banks, due to the increased complexity of the memory architecture. 
+Therefore, a memory architecture with six banks is not a potentially efficiency options due to the high overhead and the very low energy gain.
+
+\textbf{This has been clarified in the first paragraph on Section 5.3.}
+
+\item \textit{Section 6 and Section 7 can be combined as single Section for experimental evaluation.}
+\\
+\\
+The appropriate changes have been made.
+
+\item 
+\textit{Typos: \\ 
+Page 4: we assume here that he memory \textrightarrow we assume here that the memory\\ 
+Page 4: using four banks is presented in Fig.1(b) \textrightarrow using four banks is presented in Fig.1(c) \\ 
+Page 4: The data-to-memory mapping for the constructed \textrightarrow The optimized data-to memory mapping for the constructed \\ 
+Page 6: that is always accesses \textrightarrow that is always accessed \\ 
+Page 7: must developed \textrightarrow must be developed \\ 
+Page 8: is higher compared to sleep mode \textrightarrow is higher compared to light sleep mode \\ Page 14: This application is an representative \textrightarrow This application is a representative}
+\\
+\\
+The typos have been fixed.
+
+\end{itemize}
+
+\subsection*{Referee 2}
+
+\begin{itemize}
+
+\item \textit{However, the paper does not clearly distinguish the main contribution and 
+the difference from the previous work. Original contribution needs to stand
+out clearly.}
+
+The contribution of the proposed work is the development of a combined approach that investigates the interleaving and memory mapping options for a reconfigurable SIMD architecture.  
+The current work combines and expands in a non-trivial way, the interleaving exploration presented in \cite{sharma2013data} and the data to memory mapping methodology presented in \cite{filippopoulos2013exploration}. 
+The current work is more than a simple application of the two approaches, one after the other.
+Such an approach cannot always guarantee the optimal results.
+The reason is that for each different interleaving solutions, there is a different corresponding optimal memory mapping solution.
+However, an interleaving solution that results in less access holes than another, can lead to a less optimal memory mapping.
+In general, the optimal interleaving solution does not always lead to the optimal data-to-memory mapping solution.
+The reason is that the interleaving solution adds a number of constraints on the mapping of the interleaving data into the memory. 
+Different interleaving solutions introduce different constraints. 
+Therefore, there is a need to develop an integrated methodology for the achieving the improvements of both approaches.
+
+\textbf{This has been clarified at the end of Section 3.}
+
+\item \textit{It would be interesting to see more workloads analyzed in the framework.}
+
+Unfortunately, it was impossible to analyze more benchmarks for the current revision. However, we can expand the results, if extra time is given.
+
+\item \textit{The paper focuses on SIMD architectures but it does not make any reference memory mapping optimization on GPUs. Also it would be interesting to
+see if the framework can capture more irregular access patterns and data mapping schemes (e.g. permutations, indirect addresses, etc.). }
+
+The presented methodology should be applicable on these cases with some modifications.
+
+\item \textit{Some references worth discussing:
+Dymaxion: optimizing memory access patterns for heterogeneous systems, SC'11
+Data reorganization in memory using 3D-stacked DRAM, ISCA'15
+DL: A data layout transformation system for heterogeneous computing, InPar'12}
+
+
+
+\end{itemize}
+
+\subsection*{Referee 3}
+
+\begin{itemize}
+
+\item \textit{However, it is unclear to readers how the entire work is done.  Figure 2 only gives a simple diagram.  In particular,  what microarchitecture enhancement is included and how access patterns are extracted (in SW/HW) ?  How address mapping is implemented and its policy?  How interleaving is handled when there are bank conflicts and imperfect coalescing for SIMDs.  In general,  many details are missing.  Fig 3 is not very helpful.}
+
+\item \textit{Also, the authors may look into the recent work by Akin, et al. "Data Reorganization in Memory Using 3D-stacked DRAM", ISCA 2015.}
+
+\item \textit{A minor point is the chosen benchmarks are not very irregular if appropriate data layouts are chosen.  This is fine, but the authors may consider other possibilities such as graphs and sparse matrices.}
+
+The term irregular has been replaced with more descriptive terms, i.e. application with holes in their access pattern, as also noted by Referee 1. 
+
+\end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{reference}
+  
+
+\end{document}
