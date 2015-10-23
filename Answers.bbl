@@ -1,5 +1,18 @@
 \begin{thebibliography}{1}
 
+\bibitem{3D}
+Berkin Akin, Franz Franchetti, and James~C Hoe.
+\newblock Data reorganization in memory using 3d-stacked dram.
+\newblock In {\em Proceedings of the 42nd Annual International Symposium on
+  Computer Architecture}, pages 131--143. ACM, 2015.
+
+\bibitem{dymaxion}
+Shuai Che, Jeremy~W Sheaffer, and Kevin Skadron.
+\newblock Dymaxion: optimizing memory access patterns for heterogeneous
+  systems.
+\newblock In {\em Proceedings of 2011 international conference for high
+  performance computing, networking, storage and analysis}, page~13. ACM, 2011.
+
 \bibitem{Virage}
 DesignWare~Memory Compilers.
 \newblock {\em 40LP-TSMC Datasheet}.
@@ -9,6 +22,13 @@ Iason Filippopoulos, Francky Catthoor, and Per~Gunnar Kjeldsberg.
 \newblock Exploration of energy efficient memory organisations for dynamic
   multimedia applications using system scenarios.
 \newblock {\em Design Automation for Embedded Systems}, pages 1--24, 2013.
+
+\bibitem{ishitobi2007code}
+Yuriko Ishitobi, Tohru Ishihara, and Hiroto Yasuura.
+\newblock Code placement for reducing the energy consumption of embedded
+  processors with scratchpad and cache memories.
+\newblock In {\em Embedded Systems for Real-Time Multimedia, 2007. ESTIMedia
+  2007. IEEE/ACM/IFIP Workshop on}, pages 13--18. IEEE, 2007.
 
 \bibitem{xml}
 Bingfeng Mei, Serge Vernalde, Diederik Verkest, Hugo De~Man, and Rudy
@@ -24,5 +44,18 @@ Namita Sharma, TV~Aa, Prashant Agrawal, Praveen Raghavan, Preeti~Ranjan Panda,
 \newblock Data memory optimization in lte downlink.
 \newblock In {\em Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE
   International Conference on}, pages 2610--2614. IEEE, 2013.
+
+\bibitem{steinke2002assigning}
+Stefan Steinke, Lars Wehmeyer, Bo-Sik Lee, and Peter Marwedel.
+\newblock Assigning program and data objects to scratchpad for energy
+  reduction.
+\newblock In {\em Design, Automation and Test in Europe Conference and
+  Exhibition, 2002. Proceedings}, pages 409--415. IEEE, 2002.
+
+\bibitem{DL}
+I-Jui Sung, Geng~Daniel Liu, and Wen-Mei~W Hwu.
+\newblock Dl: A data layout transformation system for heterogeneous computing.
+\newblock In {\em Innovative Parallel Computing (InPar), 2012}, pages 1--11.
+  IEEE, 2012.
 
 \end{thebibliography}
