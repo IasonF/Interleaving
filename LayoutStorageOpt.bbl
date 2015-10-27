@@ -42,6 +42,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Akin, Franchetti, and Hoe}{Akin
+  et~al\mbox{.}}{2015}]%
+        {3D}
+{Berkin Akin}, {Franz Franchetti}, {and} {James~C Hoe}. 2015.
+\newblock \showarticletitle{Data reorganization in memory using 3D-stacked
+  DRAM}. In {\em Proceedings of the 42nd Annual International Symposium on
+  Computer Architecture}. ACM, 131--143.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Benini, Macii, Macii, and Poncino}{Benini
   et~al\mbox{.}}{2000b}]%
         {Ben00c}
@@ -92,6 +102,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Che, Sheaffer, and Skadron}{Che
+  et~al\mbox{.}}{2011}]%
+        {dymaxion}
+{Shuai Che}, {Jeremy~W Sheaffer}, {and} {Kevin Skadron}. 2011.
+\newblock \showarticletitle{Dymaxion: optimizing memory access patterns for
+  heterogeneous systems}. In {\em Proceedings of 2011 international conference
+  for high performance computing, networking, storage and analysis}. ACM, 13.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Chen and Sha}{Chen and Sha}{1999}]%
         {chen1999loop}
 {Fei Chen} {and} {Edwin Hsing-Mean Sha}. 1999.
@@ -109,15 +129,6 @@
   models}. In {\em Design Automation Conference, 2009. ASP-DAC 2009. Asia and
   South Pacific}. IEEE, 811--816.
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{Compilers}{Compilers}{}]%
-        {Virage}
-{DesignWare~Memory Compilers}.
-\newblock {\em 40LP-TSMC Datasheet}.
-\newblock
-\showURL{%
-\url{https://www.synopsys.com/dw/doc.php/ds/es/40LP_Duet_memory_logic_DS.pdf}}
 
 
 \bibitem[\protect\citeauthoryear{Filippopoulos, Catthoor, and
@@ -189,6 +200,17 @@
   System Operating at Near-Threshold}.
 \newblock {\em Biomedical Circuits and Systems, IEEE Transactions on\/} {5}, 6
   (2011), 546--554.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Ishitobi, Ishihara, and Yasuura}{Ishitobi
+  et~al\mbox{.}}{2007}]%
+        {ishitobi2007code}
+{Yuriko Ishitobi}, {Tohru Ishihara}, {and} {Hiroto Yasuura}. 2007.
+\newblock \showarticletitle{Code placement for reducing the energy consumption
+  of embedded processors with scratchpad and cache memories}. In {\em Embedded
+  Systems for Real-Time Multimedia, 2007. ESTIMedia 2007. IEEE/ACM/IFIP
+  Workshop on}. IEEE, 13--18.
 \newblock
 
 
@@ -439,11 +461,23 @@
 \bibitem[\protect\citeauthoryear{Sharma, Aa, Agrawal, Raghavan, Panda, and
   Catthoor}{Sharma et~al\mbox{.}}{2013}]%
         {sharma2013data}
-{Namita Sharma}, {TV Aa}, {Prashant Agrawal}, {Praveen Raghavan},
+{Namita Sharma}, {Tom~Vander Aa}, {Prashant Agrawal}, {Praveen Raghavan},
   {Preeti~Ranjan Panda}, {and} {Francky Catthoor}. 2013.
 \newblock \showarticletitle{Data memory optimization in LTE downlink}. In {\em
   Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE International
   Conference on}. IEEE, 2610--2614.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Sharma, Panda, Catthoor, Raghavan, and
+  Aa}{Sharma et~al\mbox{.}}{2015}]%
+        {sharma2015array}
+{Namita Sharma}, {Preeti~Ranjan Panda}, {Francky Catthoor}, {Praveen Raghavan},
+  {and} {Tom~Vander Aa}. 2015.
+\newblock \showarticletitle{Array Interleaving An Energy Efficient Data Layout
+  Transformation}.
+\newblock {\em ACM Transactions on Design Automation of Electronic Systems
+  (TODAES)\/} {20}, 3 (2015), 44.
 \newblock
 
 
@@ -454,6 +488,26 @@
 \newblock \showarticletitle{Cycle-accurate simulation of energy consumption in
   embedded systems}. In {\em Proceedings of the 36th annual ACM/IEEE Design
   Automation Conference}. ACM, 867--872.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Steinke, Wehmeyer, Lee, and Marwedel}{Steinke
+  et~al\mbox{.}}{2002}]%
+        {steinke2002assigning}
+{Stefan Steinke}, {Lars Wehmeyer}, {Bo-Sik Lee}, {and} {Peter Marwedel}. 2002.
+\newblock \showarticletitle{Assigning program and data objects to scratchpad
+  for energy reduction}. In {\em Design, Automation and Test in Europe
+  Conference and Exhibition, 2002. Proceedings}. IEEE, 409--415.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Sung, Liu, and Hwu}{Sung
+  et~al\mbox{.}}{2012}]%
+        {DL}
+{I-Jui Sung}, {Geng~Daniel Liu}, {and} {Wen-Mei~W Hwu}. 2012.
+\newblock \showarticletitle{DL: A data layout transformation system for
+  heterogeneous computing}. In {\em Innovative Parallel Computing (InPar),
+  2012}. IEEE, 1--11.
 \newblock
 
 

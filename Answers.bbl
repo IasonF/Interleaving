@@ -13,10 +13,6 @@ Shuai Che, Jeremy~W Sheaffer, and Kevin Skadron.
 \newblock In {\em Proceedings of 2011 international conference for high
   performance computing, networking, storage and analysis}, page~13. ACM, 2011.
 
-\bibitem{Virage}
-DesignWare~Memory Compilers.
-\newblock {\em 40LP-TSMC Datasheet}.
-
 \bibitem{filippopoulos2013exploration}
 Iason Filippopoulos, Francky Catthoor, and Per~Gunnar Kjeldsberg.
 \newblock Exploration of energy efficient memory organisations for dynamic
@@ -39,11 +35,18 @@ Bingfeng Mei, Serge Vernalde, Diederik Verkest, Hugo De~Man, and Rudy
   IEEE International Conference on}, pages 166--173. IEEE, 2002.
 
 \bibitem{sharma2013data}
-Namita Sharma, TV~Aa, Prashant Agrawal, Praveen Raghavan, Preeti~Ranjan Panda,
-  and Francky Catthoor.
+Namita Sharma, Tom~Vander Aa, Prashant Agrawal, Praveen Raghavan, Preeti~Ranjan
+  Panda, and Francky Catthoor.
 \newblock Data memory optimization in lte downlink.
 \newblock In {\em Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE
   International Conference on}, pages 2610--2614. IEEE, 2013.
+
+\bibitem{sharma2015array}
+Namita Sharma, Preeti~Ranjan Panda, Francky Catthoor, Praveen Raghavan, and
+  Tom~Vander Aa.
+\newblock Array interleaving an energy efficient data layout transformation.
+\newblock {\em ACM Transactions on Design Automation of Electronic Systems
+  (TODAES)}, 20(3):44, 2015.
 
 \bibitem{steinke2002assigning}
 Stefan Steinke, Lars Wehmeyer, Bo-Sik Lee, and Peter Marwedel.

@@ -22,16 +22,19 @@ The term irregular has been replaced with more descriptive terms, i.e. applicati
 
 \item \textit{In the experimental evaluation, have you also compared the proposed methodology with the state-of-art energy optimization techniques for embedded systems? If so, what is improvement of your approach over theirs?}
 
-It is difficult to reproduce the results from other groups only by reading their published work. The set of benchmarks is also different. Thus, related work is presented but not directly compared with the current approach. Much of the related work is also not directly applicable to the target benchmarks as shown in the paper. The paper hence compares the current approach with previously published work from our groups.
+Several state-of-the-art techniques are presented as related work. 
+Those approaches are not directly applicable for comparison, as it is discussed on Section 3.
+The related work is not directly applicable primarily due to differences in the memory architectures and the studied sets of benchmarks. 
+The paper hence compares the current approach with previously published work from our groups.
 %PGK: Ask Francky if he has a better wording for this. 
 
 \item \textit{Interleaving is only one type of data layout optimization. Have you also tried other more complex optimizations? What is the main reason that you think interleaving is the most suitable/efficient one?}
 
-Interleaving is an energy optimization technique for the target set of benchmark applications, which are characterized by holes in their access patterns.
-The applications that benefit most from the proposed methodology are characterized by having access patterns with holes.
+Array Interleaving is a data layout transformation for combining the storage of multiple arrays, so that blocks of data from different arrays are stored contiguously, with the objective of reducing the number of memory accesses through better spatial locality. \cite{sharma2015array}.
+The target applications on the current work benefit most from the proposed methodology, because they are characterized by having access patterns with holes.
 Interleaving is a widely used technique that fits the goal of generating more compact sets of data.
-Other optimization techniques can be complementary to the interleaving step of the methodology, if they are applied prior to the interleaving step.
-An important contribution of the work is the combination of the interleaving optimization with data to memory mapping. Having shown the benefits of this, future work can include extending the methodology to be compatible with additional layout optimization techniques.
+An important contribution of the work is the combination of the interleaving optimization with data to memory mapping. 
+Having shown the benefits of this, future work can include extending the methodology to be compatible with additional layout optimization techniques.
 
 \textbf{This has been clarified on Section 6.1}
 
@@ -49,8 +52,9 @@ Temporal locality and data reuse are taken into consideration during the interle
 \\
 \\
 \begin{enumerate}
-\item A quick estimate of the difference in the energy consumption between the approaches presented in Fig. 1 can be found using a simple energy model for the memory banks. 
-The model is based on simple, yet realistic, estimates of the dynamic and static energy in the memory banks.
+\item A quick estimate of the difference in the energy consumption between the approaches presented in Fig. 1 can be found using a realistic energy model for the memory banks.
+The energy model, which has been also presented in \cite{sharma2015array}, is derived from synthesized memory models presented in Sec. 4.
+The model is based on realistic estimates of the dynamic and static energy in the memory banks.
 The scope is to illustrate the motivation for this work, without extensively describing the detailed memory model characteristics. 
 The target architecture and the energy models are described in depth in Sec. 4. 
 For the simple model in this chapter, we assume that the static energy is 30\% of the dynamic energy, which is a rational approximation for small memory banks with sizes between 1KB and 16KB.
@@ -59,9 +63,10 @@ Similarly the approximation for the correlation between the dynamic energy and t
 
 \textbf{This has been clarified on Section 2}
 
-%PGK: If you have not already, I suggest referring to Sec. 4 in Sec. 2 to "prove" that the simple model is sufficiently accurate.
-
-\item The commercial memory compiler is one of the state-of-the-art compilers. The logic libraries support a wide range of foundries and process technologies from 250nm to 28nm. The memories are optimized for low power, high performance and high density. A 40nm library was chosen for the current work.  Of confidentiality reasons we are not allowed to reveal details of the compiler or process.
+\item The commercial memory compiler is part of DesignWare Memory Compilers provided by Synopsys.
+The logic libraries support a wide range of foundries and process technologies from 250nm to 28nm. 
+The memories are optimized for low power, high performance and high density. A 40nm library was chosen for the current work.  
+Of confidentiality reasons we are not allowed to reveal details of the compiler or process and the presented numbers are relative.
 %PGK: Check with Francky what he thinks we are allowed to say. I think it is OK to mention Synopsys DesignWare Memory Compiler, but probably not 40LP-TSMC. At least not if the numbers in the tables are actual numbers (not relative). Or are they only relative?
 
 \textbf{This has been clarified on Section 4.1}
@@ -129,7 +134,7 @@ Such an approach cannot always guarantee a viable solution.
 The reason is that for each different interleaving solution, there are a number of constraints on the placement of the data into the memory due to hardware limitations.
 If the constraints are not propagated into the data-to-memory mapping step, the final solution suffers from data conflicts.
 Different interleaving solutions introduce different constraints. 
-Therefore, there is a need to develop an integrated methodology to achieve the improvements of both approaches.
+Therefore, there is a need to develop an integrated methodology to achieve the improvements of both the approaches.
 
 \textbf{This has been clarified at the end of Section 3.}
 
@@ -142,7 +147,9 @@ The results are representative for other applications with the same characterist
 \item \textit{The paper focuses on SIMD architectures but it does not make any reference memory mapping optimization on GPUs. Also it would be interesting to
 see if the framework can capture more irregular access patterns and data mapping schemes (e.g. permutations, indirect addresses, etc.). }
 
-The presented methodology should indeed be applicable in these cases as well. Some modifications would be needed, however.
+The presented methodology should indeed be applicable in these cases as well. 
+Some modifications would be needed, however.
+For example, GPUs can exploit computation parallelism, so data should be mapped in different memory banks to be accessed in parallel.
 %PGK: Here it would be good if you are able to mention one or two anticipated modifications. 
 
 \item \textit{Some references worth discussing:
@@ -182,10 +189,10 @@ In contrast to cache memory systems, in which the mapping of data elements is do
 Unlike the cache memory, the scratchpad memory does not need tag search operations and it is the responsibility of the programmers or compilers to correctly allocate code and data on the scratchpad memory \cite{steinke2002assigning}.
 This is possible for small embedded systems designed to run one or a limited set of specific applications. 
 For other types of systems and applications, a cache memory can be the preferred solution as the detection of a cache hit or miss is done automatically and any conflicts can also be resolved by the platform at run-time.
-In our case, the application and the memory system are fully analyzed and the allocation of data to a scratchpad memory can be easily done and offers a more energy efficient solution.
+In our case, the application and the memory system are fully analyzed and the allocation of data to a scratchpad memory can be easily done and offers an energy efficient solution.
 %PGK: You may need to be a bit more explicit in how you answer the specific questions. E.g., where in your answer do you talk about bank conflicts?. 
 
-\textbf{This has been clarified on Section 4. Changes have been made to better explain the platform and the flow presented in Fig. 3}
+\textbf{This has been clarified on Section 5. Changes have been made to better explain the platform and the flow presented in Fig. 3}
 
 \item \textit{Also, the authors may look into the recent work by Akin, et al. "Data Reorganization in Memory Using 3D-stacked DRAM", ISCA 2015.}
 

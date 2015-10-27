@@ -8,21 +8,25 @@ Database file #1: reference.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty publisher in abraham1999automatic
 Warning--empty address in abraham1999automatic
+Warning--empty publisher in 3D
+Warning--empty address in 3D
 Warning--unusual to have number, but no volume, for Ben00c
 Warning--empty publisher in Ben00b
 Warning--empty address in Ben00b
 Warning--empty address in 6
 Warning--empty address in dtse
+Warning--empty publisher in dymaxion
+Warning--empty address in dymaxion
 Warning--empty publisher in chen1999loop
 Warning--empty address in chen1999loop
 Warning--empty publisher in Che09
 Warning--empty address in Che09
-Warning--empty year in Virage
-Warning--empty organization in Virage
 Warning--no number and no volume in filippopoulos2013exploration
 Warning--require articleno with numpages field in Garcia
 Warning--empty publisher in grun2000mist
 Warning--empty address in grun2000mist
+Warning--empty publisher in ishitobi2007code
+Warning--empty address in ishitobi2007code
 Warning--empty publisher in jantsch1994hardware
 Warning--empty address in jantsch1994hardware
 Warning--empty publisher in kandemir2001improving
@@ -49,45 +53,49 @@ Warning--empty publisher in sharma2013data
 Warning--empty address in sharma2013data
 Warning--empty publisher in Ben99
 Warning--empty address in Ben99
-You've used 40 entries,
+Warning--empty publisher in steinke2002assigning
+Warning--empty address in steinke2002assigning
+Warning--empty publisher in DL
+Warning--empty address in DL
+You've used 45 entries,
             5290 wiz_defined-function locations,
-            1452 strings with 22700 characters,
-and the built_in function-call counts, 43788 in all, are:
-= -- 5463
-> -- 2040
+            1480 strings with 23899 characters,
+and the built_in function-call counts, 48592 in all, are:
+= -- 5952
+> -- 2299
 < -- 0
-+ -- 647
-- -- 747
-* -- 3082
-:= -- 4991
-add.period$ -- 205
-call.type$ -- 40
-change.case$ -- 310
-chr.to.int$ -- 39
-cite$ -- 83
-duplicate$ -- 3379
-empty$ -- 2397
-format.name$ -- 819
-if$ -- 10473
++ -- 727
+- -- 752
+* -- 3425
+:= -- 5546
+add.period$ -- 231
+call.type$ -- 45
+change.case$ -- 350
+chr.to.int$ -- 44
+cite$ -- 96
+duplicate$ -- 3902
+empty$ -- 2756
+format.name$ -- 919
+if$ -- 11720
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 147
-newline$ -- 345
-num.names$ -- 319
-pop$ -- 1384
+missing$ -- 176
+newline$ -- 379
+num.names$ -- 359
+pop$ -- 1615
 preamble$ -- 1
-purify$ -- 509
+purify$ -- 574
 quote$ -- 0
-skip$ -- 980
+skip$ -- 1114
 stack$ -- 0
-substring$ -- 3307
-swap$ -- 351
-text.length$ -- 143
+substring$ -- 3429
+swap$ -- 400
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 536
-warning$ -- 43
-while$ -- 292
+type$ -- 606
+warning$ -- 51
+while$ -- 321
 width$ -- 0
-write$ -- 714
-(There were 43 warnings)
+write$ -- 801
+(There were 51 warnings)
