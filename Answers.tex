@@ -194,7 +194,7 @@ The mapping to the specific target architecture is also fully decided at design-
 The data-to-memory mapping exploration takes into consideration the platform and code limitation and proposes a mapping without data and bank conflicts.
 The employment of a scratchpad memory architecture is crucial for this.
 In contrast to cache memory systems, in which the mapping of data elements is done at run-time, in scratchpad memory systems the mapping is performed by the programmer or the compiler \cite{ishitobi2007code}. 
-The address mapping follows the principles presented in \cite{address}. 
+The address mapping follows the principles presented in \cite{address} and \cite{sharma2015array}. 
 Unlike the cache memory, the scratchpad memory does not need tag search operations and it is the responsibility of the programmers or compilers to correctly allocate code and data on the scratchpad memory \cite{steinke2002assigning}.
 This is possible for small embedded systems designed to run one or a limited set of specific applications. 
 For other types of systems and applications, a cache memory can be the preferred solution as the detection of a cache hit or miss is done automatically and any conflicts can also be resolved by the platform at run-time.
