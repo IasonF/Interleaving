@@ -131,6 +131,18 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Cho, Issenin, Dutt, Yoon, and Paek}{Cho
+  et~al\mbox{.}}{2007}]%
+        {address}
+{Doosan Cho}, {Ilya Issenin}, {Nikil Dutt}, {Jonghee~W Yoon}, {and} {Yunheung
+  Paek}. 2007.
+\newblock \showarticletitle{Software controlled memory layout reorganization
+  for irregular array access patterns}. In {\em Proceedings of the 2007
+  international conference on Compilers, architecture, and synthesis for
+  embedded systems}. ACM, 179--188.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Filippopoulos, Catthoor, and
   Kjeldsberg}{Filippopoulos et~al\mbox{.}}{2013}]%
         {filippopoulos2013exploration}

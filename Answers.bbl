@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{3D}
 Berkin Akin, Franz Franchetti, and James~C Hoe.
@@ -13,11 +13,27 @@ Shuai Che, Jeremy~W Sheaffer, and Kevin Skadron.
 \newblock In {\em Proceedings of 2011 international conference for high
   performance computing, networking, storage and analysis}, page~13. ACM, 2011.
 
+\bibitem{address}
+Doosan Cho, Ilya Issenin, Nikil Dutt, Jonghee~W Yoon, and Yunheung Paek.
+\newblock Software controlled memory layout reorganization for irregular array
+  access patterns.
+\newblock In {\em Proceedings of the 2007 international conference on
+  Compilers, architecture, and synthesis for embedded systems}, pages 179--188.
+  ACM, 2007.
+
 \bibitem{filippopoulos2013exploration}
 Iason Filippopoulos, Francky Catthoor, and Per~Gunnar Kjeldsberg.
 \newblock Exploration of energy efficient memory organisations for dynamic
   multimedia applications using system scenarios.
 \newblock {\em Design Automation for Embedded Systems}, pages 1--24, 2013.
+
+\bibitem{40nm}
+Tobias Gemmeke, Mohamed~M Sabry, Jan Stuijt, Praveen Raghavan, Francky
+  Catthoor, and David Atienza.
+\newblock Resolving the memory bottleneck for single supply near-threshold
+  computing.
+\newblock In {\em Design, Automation and Test in Europe Conference and
+  Exhibition (DATE), 2014}, pages 1--6. IEEE, 2014.
 
 \bibitem{ishitobi2007code}
 Yuriko Ishitobi, Tohru Ishihara, and Hiroto Yasuura.

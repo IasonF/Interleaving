@@ -264,6 +264,8 @@ Design methods with main focus on the traffic and latencies in the memory archit
 Improving memory energy efficiency based on a study of access patterns is discussed in \cite{kandemir2001improving}.
 Application specific memory design is a research topic in \cite{schmit1997synthesis}, while memory design for multimedia applications is presented in \cite{oshima1997high}.
 The current work differentiates by presenting both a reconfigurable platform and the necessary data interleaving to better exploit the platform.
+The discussed related work is not designed to handle dynamic variations on memory requirements due to employment of a static memory platform. 
+Thus, it is expected to provide poor results when applied to the dynamic applications targeted in the current work.
 
 The current work combines and expands in a non-trivial way, the interleaving exploration presented in \cite{sharma2013data} and the data to memory mapping methodology presented in \cite{filippopoulos2013exploration}. 
 In \cite{sharma2013data} a memory dominant application is chosen, which normally suffers from data memory organization bottlenecks while implemented on conventional architectures. 
@@ -273,6 +275,7 @@ In \cite{filippopoulos2013exploration} a memory-aware system scenario methodolog
 The variations in memory needs during the lifetime of an application are studied in order to optimize energy usage.
 Different system scenarios capture the application's different resource requirements that change dynamically at run-time.
 Many possible memory platform configurations and data-to-memory assignments are studied as system scenario parameters, which lead to a large exploration space.
+
 
 The contribution of the proposed work is the development of a combined approach that investigates the interleaving and memory mapping options for a reconfigurable SIMD architecture.  
 The current work combines and expands in a non-trivial way, the interleaving exploration presented in \cite{sharma2013data} and the data to memory mapping methodology presented in \cite{filippopoulos2013exploration}. 
@@ -461,6 +464,7 @@ The mapping to the specific target architecture is also fully decided at design-
 The data-to-memory mapping exploration takes into consideration the platform and code limitation and proposes a mapping without data and bank conflicts.
 The employment of a scratchpad memory architecture is crucial for this.
 In contrast to cache memory systems, in which the mapping of data elements is done at run-time, in scratchpad memory systems the mapping is performed by the programmer or the compiler \cite{ishitobi2007code}. 
+The address mapping follows the principles presented in \cite{address}. 
 Unlike the cache memory, the scratchpad memory does not need tag search operations and it is the responsibility of the programmers or compilers to correctly allocate code and data on the scratchpad memory \cite{steinke2002assigning}.
 This is possible for small embedded systems designed to run one or a limited set of specific applications. 
 For other types of systems and applications, a cache memory can be the preferred solution as the detection of a cache hit or miss is done automatically and any conflicts can also be resolved by the platform at run-time.
@@ -566,10 +570,13 @@ The mapping step is performed based on these constrains.
 
 \subsection{Benchmark Applications}
 
-Array Interleaving is a data layout transformation for combining the storage of multiple arrays, so that blocks of data from different arrays are stored contiguously, with the objective of reducing the number of memory accesses through better spatial locality \cite{sharma2015array}.
+Array Interleaving is a data layout transformation for combining the storage of multiple arrays, so that blocks of data from different arrays are stored contiguously, with the objective of reducing the number of memory accesses through better spatial locality. \cite{sharma2015array}.
 The target applications on the current work benefit most from the proposed methodology, because they are characterized by having access patterns with holes.
 Interleaving is a widely used technique that fits the goal of generating more compact sets of data.
 An important contribution of the work is the combination of the interleaving optimization with data to memory mapping. 
+Another important advantage of interleaving transformations is the low addressing  overhead.
+In more detail, interleaving results in a more regular global access by reducing the number of holes without increasing significantly the addressing for accessing the individual arrays afterwards.
+Although more complex data layout transformations may reduce the holes in the access patterns even more, they have a negative impact on the complexity of addressing and access overhead.
 Having shown the benefits of this, future work can include extending the methodology to be compatible with additional layout optimization techniques.
 
 Applications with holes in their access pattern can be found on several application domains.

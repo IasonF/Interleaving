@@ -21,6 +21,8 @@ Warning--empty publisher in chen1999loop
 Warning--empty address in chen1999loop
 Warning--empty publisher in Che09
 Warning--empty address in Che09
+Warning--empty publisher in address
+Warning--empty address in address
 Warning--no number and no volume in filippopoulos2013exploration
 Warning--require articleno with numpages field in Garcia
 Warning--empty publisher in grun2000mist
@@ -57,45 +59,45 @@ Warning--empty publisher in steinke2002assigning
 Warning--empty address in steinke2002assigning
 Warning--empty publisher in DL
 Warning--empty address in DL
-You've used 45 entries,
+You've used 46 entries,
             5290 wiz_defined-function locations,
-            1480 strings with 23899 characters,
-and the built_in function-call counts, 48592 in all, are:
-= -- 5952
-> -- 2299
+            1484 strings with 24186 characters,
+and the built_in function-call counts, 49789 in all, are:
+= -- 6068
+> -- 2362
 < -- 0
-+ -- 727
-- -- 752
-* -- 3425
-:= -- 5546
-add.period$ -- 231
-call.type$ -- 45
-change.case$ -- 350
-chr.to.int$ -- 44
-cite$ -- 96
-duplicate$ -- 3902
-empty$ -- 2756
-format.name$ -- 919
-if$ -- 11720
++ -- 747
+- -- 772
+* -- 3517
+:= -- 5687
+add.period$ -- 236
+call.type$ -- 46
+change.case$ -- 359
+chr.to.int$ -- 45
+cite$ -- 99
+duplicate$ -- 4007
+empty$ -- 2828
+format.name$ -- 943
+if$ -- 11994
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 176
-newline$ -- 379
-num.names$ -- 359
-pop$ -- 1615
+missing$ -- 181
+newline$ -- 386
+num.names$ -- 367
+pop$ -- 1663
 preamble$ -- 1
-purify$ -- 574
+purify$ -- 588
 quote$ -- 0
-skip$ -- 1114
+skip$ -- 1142
 stack$ -- 0
-substring$ -- 3429
-swap$ -- 400
+substring$ -- 3519
+swap$ -- 411
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 606
-warning$ -- 51
-while$ -- 321
+type$ -- 620
+warning$ -- 53
+while$ -- 328
 width$ -- 0
-write$ -- 801
-(There were 51 warnings)
+write$ -- 818
+(There were 53 warnings)

@@ -25,7 +25,12 @@ The term irregular has been replaced with more descriptive terms, i.e. applicati
 Several state-of-the-art techniques are presented as related work. 
 Those approaches are not directly applicable for comparison, as it is discussed on Section 3.
 The related work is not directly applicable primarily due to differences in the memory architectures and the studied sets of benchmarks. 
+The current work presents a reconfigurable memory architecture that exploits the dynamism in memory requirements during application's lifetime.
+The discussed related work is not designed to handle dynamic variations on memory requirements due to employment of a static memory platform. 
+Thus, it is expected to provide poor results when applied to the dynamic applications targeted in the current work.
 The paper hence compares the current approach with previously published work from our groups.
+
+\textbf{This has been clarified on Section 3}
 %PGK: Ask Francky if he has a better wording for this. 
 
 \item \textit{Interleaving is only one type of data layout optimization. Have you also tried other more complex optimizations? What is the main reason that you think interleaving is the most suitable/efficient one?}
@@ -34,6 +39,9 @@ Array Interleaving is a data layout transformation for combining the storage of 
 The target applications on the current work benefit most from the proposed methodology, because they are characterized by having access patterns with holes.
 Interleaving is a widely used technique that fits the goal of generating more compact sets of data.
 An important contribution of the work is the combination of the interleaving optimization with data to memory mapping. 
+Another important advantage of interleaving transformations is the low addressing  overhead.
+In more detail, interleaving results in a more regular global access by reducing the number of holes without increasing significantly the addressing for accessing the individual arrays afterwards.
+Although more complex data layout transformations may reduce the holes in the access patterns even more, they have a negative impact on the complexity of addressing and access overhead.
 Having shown the benefits of this, future work can include extending the methodology to be compatible with additional layout optimization techniques.
 
 \textbf{This has been clarified on Section 6.1}
@@ -65,7 +73,8 @@ Similarly the approximation for the correlation between the dynamic energy and t
 
 \item The commercial memory compiler is part of DesignWare Memory Compilers provided by Synopsys.
 The logic libraries support a wide range of foundries and process technologies from 250nm to 28nm. 
-The memories are optimized for low power, high performance and high density. A 40nm library was chosen for the current work.  
+The memories are optimized for low power, high performance and high density. 
+A 40nm library was chosen for the current work and a presentation of the memory cells can be found in \cite{40nm}.  
 Of confidentiality reasons we are not allowed to reveal details of the compiler or process and the presented numbers are relative.
 %PGK: Check with Francky what he thinks we are allowed to say. I think it is OK to mention Synopsys DesignWare Memory Compiler, but probably not 40LP-TSMC. At least not if the numbers in the tables are actual numbers (not relative). Or are they only relative?
 
@@ -142,7 +151,7 @@ Therefore, there is a need to develop an integrated methodology to achieve the i
 
 Unfortunately, it was impossible to analyze more benchmarks for the current revision. 
 The chosen applications are representative candidates for the multimedia and the wireless domains.
-The results are representative for other applications with the same characteristics.
+We believe that the results are also representative for other applications with the same characteristics.
 
 \item \textit{The paper focuses on SIMD architectures but it does not make any reference memory mapping optimization on GPUs. Also it would be interesting to
 see if the framework can capture more irregular access patterns and data mapping schemes (e.g. permutations, indirect addresses, etc.). }
@@ -168,9 +177,8 @@ We differentiate by focusing on the memory closest to the CPU. We also study dat
 In \cite{3D} a number of common data reorganization operations such as shuffle, pack/unpack, swap, transpose, and layout transformations are presented. 
 The goal is to study the cost of applying these operations in the memory at run-time. The target memory is 3D-stacked DRAM and additional hardware is employed in order to efficiently perform the reorganization operations with a low overhead. 
 Apart from the different type of platform, the current work differentiates in the type of data reorganizations and the mapping of the reorganized data to the scratchpad memory at compilation time. 
-%PG: You have added these references to the previous work part of the paper I guess? If not, I think you should.
 
-\textbf{This has been clarified on Section 3.}
+\textbf{We have added these references to our related work overview in Section 3.}
 
 \end{itemize}
 
@@ -186,6 +194,7 @@ The mapping to the specific target architecture is also fully decided at design-
 The data-to-memory mapping exploration takes into consideration the platform and code limitation and proposes a mapping without data and bank conflicts.
 The employment of a scratchpad memory architecture is crucial for this.
 In contrast to cache memory systems, in which the mapping of data elements is done at run-time, in scratchpad memory systems the mapping is performed by the programmer or the compiler \cite{ishitobi2007code}. 
+The address mapping follows the principles presented in \cite{address}. 
 Unlike the cache memory, the scratchpad memory does not need tag search operations and it is the responsibility of the programmers or compilers to correctly allocate code and data on the scratchpad memory \cite{steinke2002assigning}.
 This is possible for small embedded systems designed to run one or a limited set of specific applications. 
 For other types of systems and applications, a cache memory can be the preferred solution as the detection of a cache hit or miss is done automatically and any conflicts can also be resolved by the platform at run-time.
@@ -200,11 +209,14 @@ In \cite{3D} a number of common data reorganization operations such as shuffle, 
 The goal is to study the cost of applying these operations in the memory at run-time. The target memory is 3D-stacked DRAM and additional hardware is employed in order to efficiently perform the reorganization operations with a low overhead. 
 Apart from the different type of platform, the current work differentiates in the type of data reorganizations and the mapping of the reorganized data to the scratchpad memory at compilation time.
 
-\textbf{This has been clarified on Section 3.}
+\textbf{We have added this reference to our related work overview in Section 3.}
+
 
 \item \textit{A minor point is the chosen benchmarks are not very irregular if appropriate data layouts are chosen.  This is fine, but the authors may consider other possibilities such as graphs and sparse matrices.}
 
 The term irregular has been replaced with more descriptive terms, i.e. application with holes in their access pattern, as also noted by Referee 1. 
+Having shown the effectiveness of the technique for the chosen benchmarks, future work can extend the irregularity to include graphs and sparse matrices.
+
 
 \end{itemize}
 
